@@ -19,7 +19,7 @@
             
             <!-- Header Title -->
             <div class="page-title-box">
-                <h3>Dreamguy's Technologies</h3>
+                <h3>Tagssoftwares</h3>
             </div>
             <!-- /Header Title -->
             
@@ -171,10 +171,10 @@
                                                 </span>
                                             </div>
                                             <div class="list-body">
-                                                <span class="message-author">Richard Miles </span>
-                                                <span class="message-time">12:28 AM</span>
+                                                <span class="message-author"></span>
+                                                <span class="message-time"></span>
                                                 <div class="clearfix"></div>
-                                                <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                                <span class="message-content"></span>
                                             </div>
                                         </div>
                                     </a>
@@ -188,10 +188,10 @@
                                                 </span>
                                             </div>
                                             <div class="list-body">
-                                                <span class="message-author">John Doe</span>
-                                                <span class="message-time">6 Mar</span>
+                                                <span class="message-author"></span>
+                                                <span class="message-time"></span>
                                                 <div class="clearfix"></div>
-                                                <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                                <span class="message-content"></span>
                                             </div>
                                         </div>
                                     </a>
