@@ -19,7 +19,7 @@
             
             <!-- Header Title -->
             <div class="page-title-box">
-                <h3>Dreamguy's Technologies</h3>
+                <h3>HRMS System</h3>
             </div>
             <!-- /Header Title -->
             
@@ -265,7 +265,10 @@
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="profile.html">My Profile</a>
                         <a class="dropdown-item" href="settings.html">Settings</a>
-                        <a class="dropdown-item" href="login.html">Logout</a>
+                        <a class="dropdown-item" href="{{ url('logout') }}">Logout</a>
+                                                     <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
                     </div>
                 </li>
             </ul>
@@ -277,7 +280,11 @@
                 <div class="dropdown-menu dropdown-menu-right">
                     <a class="dropdown-item" href="profile.html">My Profile</a>
                     <a class="dropdown-item" href="settings.html">Settings</a>
-                    <a class="dropdown-item" href="login.html">Logout</a>
+                    <a class="dropdown-item" href="{{ url('logout') }} onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();>Logout</a>
+                                                     <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
                 </div>
             </div>
             <!-- /Mobile Menu -->

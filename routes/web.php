@@ -12,9 +12,20 @@
 */
 
 // Route::get('/', function () {
-//     return view('welcome');
-// });
+//     return view('users.login');
+//  });
+Route::get('/', 'Admin\AdminController@index');
+Route::group(["namespace" => 'Admin', "prefix" => "admin"], function () {
+	//Route::get('/', ['as' => 'admin.getlogin', 'uses' => 'AdminController@index']);
+	//Route::post('login', ['as' => 'users.login', 'uses' => 'AdminController@admin_login']);
+});
+Route::get('dashboard', 'UserController@dashboard')->name('dashboard');
 
-Route::get('/', 'UserController@dashboard')->name('dashboard');
+Route::post('admin_login', 'Admin\AdminController@admin_login');
+Route::get('logout', 'Admin\AdminController@logout');
 
-Route::get('/login', 'UserController@login')->name('login');
+Route::get('userlist', 'Admin\UserController@index');
+Route::get('userform', 'Admin\UserController@view_create_form');
+
+Route::get('rolelist', 'Admin\RoleController@index');
+Route::get('roleform', 'Admin\RoleController@view_role_form');
