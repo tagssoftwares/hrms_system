@@ -142,7 +142,7 @@
 									<li><a href="job-applicants.html"> Applied Candidates </a></li>
 								</ul>
 							</li>
-							<li> 
+							<!-- <li> 
 								<a href="knowledgebase.html"><i class="la la-question"></i> <span>Knowledgebase</span></a>
 							</li>
 							<li> 
@@ -153,7 +153,7 @@
 							</li>
 							<li> 
 								<a href="settings.html"><i class="la la-cog"></i> <span>Settings</span></a>
-							</li>
+							</li> -->
 							<li class="menu-title"> 
 								<span>Pages</span>
 							</li>
@@ -164,7 +164,7 @@
 									<li><a href="{{url('client-profile')}}"> Client Profile </a></li>
 								</ul>
 							</li>
-							<li class="submenu">
+							<!-- <li class="submenu">
 								<a href="#"><i class="la la-key"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="{{url('/login')}}"> Login </a></li>
@@ -173,23 +173,23 @@
 									<li><a href="otp.html"> OTP </a></li>
 									<li><a href="lock-screen.html"> Lock Screen </a></li>
 								</ul>
-							</li>
-							<li class="submenu">
+							</li> -->
+							<!-- <li class="submenu">
 								<a href="#"><i class="la la-exclamation-triangle"></i> <span> Error Pages </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="error-404.html">404 Error </a></li>
 									<li><a href="error-500.html">500 Error </a></li>
 								</ul>
-							</li>
-							<li class="submenu">
+							</li> -->
+							<!-- <li class="submenu">
 								<a href="#"><i class="la la-hand-o-up"></i> <span> Subscriptions </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="subscriptions.html"> Subscriptions (Admin) </a></li>
 									<li><a href="subscriptions-company.html"> Subscriptions (Company) </a></li>
 									<li><a href="subscribed-companies.html"> Subscribed Companies</a></li>
 								</ul>
-							</li>
-							<li class="submenu">
+							</li> -->
+							<!-- <li class="submenu">
 								<a href="#"><i class="la la-columns"></i> <span> Pages </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="search.html"> Search </a></li>
@@ -198,8 +198,8 @@
 									<li><a href="privacy-policy.html"> Privacy Policy </a></li>
 									<li><a href="blank-page.html"> Blank Page </a></li>
 								</ul>
-							</li>
-							<li class="menu-title"> 
+							</li> -->
+							<!-- <li class="menu-title"> 
 								<span>UI Interface</span>
 							</li>
 							<li> 
@@ -228,8 +228,8 @@
 							</li>
 							<li> 
 								<a href="#"><i class="la la-file-text"></i> <span>Documentation</span></a>
-							</li>
-							<li> 
+							</li> -->
+							<!-- <li> 
 								<a href="javascript:void(0);"><i class="la la-info"></i> <span>Change Log</span> <span class="badge badge-primary ml-auto">v3.4</span></a>
 							</li>
 							<li class="submenu">
@@ -253,7 +253,7 @@
 										<a href="javascript:void(0);"> <span>Level 1</span></a>
 									</li>
 								</ul>
-							</li>
+							</li> -->
 						</ul>
 					</div>
                 </div>

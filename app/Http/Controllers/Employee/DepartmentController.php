@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Employee;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
 class DepartmentController extends Controller
 {
     /**
@@ -22,10 +21,7 @@ class DepartmentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+    
 
     /**
      * Store a newly created resource in storage.
@@ -35,8 +31,13 @@ class DepartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $this->validateInput($request);
+         Department::create([
+            'name' => $request['department_name']
+        ]);
+
+        return redirect()->intended('system-management/department');
+         }
 
     /**
      * Display the specified resource.

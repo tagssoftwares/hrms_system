@@ -34,7 +34,7 @@
 											<th class="text-right">Actions</th>
 										</tr>
 									</thead>
-									<tbody>
+									<!-- <tbody>
 										<tr>
 											<td>
 												<h2 class="table-avatar">
@@ -323,7 +323,7 @@
 												</div>
 											</td>
 										</tr>
-									</tbody>
+									</tbody> -->
 								</table>
 							</div>
 						</div>
