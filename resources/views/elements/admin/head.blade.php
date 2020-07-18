@@ -8,22 +8,23 @@
         <title>Dashboard - HRMS admin template</title>
 		
 		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="{{asset ('assets/img/favicon.') }}">
 		
 		<!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{asset ('assets/css/bootstrap.min.css') }}">
 		
 		<!-- Fontawesome CSS -->
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{asset ('assets/css/font-awesome.min.css') }}">
 		
 		<!-- Lineawesome CSS -->
-        <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+        <link rel="stylesheet" href="{{asset ('assets/css/line-awesome.min.css') }}">
 		
 		<!-- Chart CSS -->
-		<link rel="stylesheet" href="assets/plugins/morris/morris.css">
-		
+		<link rel="stylesheet" href="{{asset ('assets/plugins/morris/morris.css') }}">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="{{asset('assets/css/select2.min.css')}}">
 		<!-- Main CSS -->
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="{{asset('assets/css/style.css') }}">
 		
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>

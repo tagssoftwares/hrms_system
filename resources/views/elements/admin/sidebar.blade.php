@@ -9,8 +9,8 @@
 							<li class="submenu">
 								<a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a class="active" href="index.html">Admin Dashboard</a></li>
-									<li><a href="employee-dashboard.html">Employee Dashboard</a></li>
+									<li><a class="active" href="{{url('dashboard')}}">Admin Dashboard</a></li>
+									<li><a href="{{url('emp_dashboard')}}">Employee Dashboard</a></li>
 								</ul>
 							</li>
 							<li class="submenu">
@@ -38,28 +38,28 @@
 							<li class="submenu">
 								<a href="#" class="noti-dot"><i class="la la-user"></i> <span> Employees</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="employees.html">All Employees</a></li>
-									<li><a href="holidays.html">Holidays</a></li>
-									<li><a href="leaves.html">Leaves (Admin) <span class="badge badge-pill bg-primary float-right">1</span></a></li>
-									<li><a href="leaves-employee.html">Leaves (Employee)</a></li>
-									<li><a href="leave-settings.html">Leave Settings</a></li>
-									<li><a href="attendance.html">Attendance (Admin)</a></li>
-									<li><a href="attendance-employee.html">Attendance (Employee)</a></li>
-									<li><a href="departments.html">Departments</a></li>
-									<li><a href="designations.html">Designations</a></li>
-									<li><a href="timesheet.html">Timesheet</a></li>
-									<li><a href="overtime.html">Overtime</a></li>
+									<li><a href="{{url('employee') }}">All Employees</a></li>
+									<li><a href="{{url('holiday') }}">Holidays</a></li>
+									<li><a href="{{url('leaves_admin') }}">Leaves (Admin) <span class="badge badge-pill bg-primary float-right">1</span></a></li>
+									<li><a href="{{url('leaves_employee') }}">Leaves (Employee)</a></li>
+									<li><a href="{{url('leavesetting') }}">Leave Settings</a></li>
+									<li><a href="{{url('attendance_admin') }}">Attendance (Admin)</a></li>
+									<li><a href="{{url('attendance-employee')}}">Attendance (Employee)</a></li>
+									<li><a href="{{url('departments')}}">Departments</a></li>
+									<li><a href="{{url('designations')}}">Designations</a></li>
+									<li><a href="{{url('timesheet')}}">Timesheet</a></li>
+									<li><a href="{{url('overtime')}}">Overtime</a></li>
 								</ul>
 							</li>
 							<li> 
-								<a href="clients.html"><i class="la la-users"></i> <span>Clients</span></a>
+								<a href="{{url('clients')}}"><i class="la la-users"></i> <span>Clients</span></a>
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="la la-rocket"></i> <span> Projects</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="projects.html">Projects</a></li>
-									<li><a href="tasks.html">Tasks</a></li>
-									<li><a href="task-board.html">Task Board</a></li>
+									<li><a href="{{url('project')}}">Projects</a></li>
+									<li><a href="{{url('tasks')}}">Tasks</a></li>
+									<li><a href="{{url('task-board')}}">Task Board</a></li>
 								</ul>
 							</li>
 							<li> 
@@ -74,30 +74,30 @@
 							<li class="submenu">
 								<a href="#"><i class="la la-files-o"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="estimates.html">Estimates</a></li>
-									<li><a href="invoices.html">Invoices</a></li>
-									<li><a href="payments.html">Payments</a></li>
-									<li><a href="expenses.html">Expenses</a></li>
-									<li><a href="provident-fund.html">Provident Fund</a></li>
-									<li><a href="taxes.html">Taxes</a></li>
+									<li><a href="{{url('estimates')}}">Estimates</a></li>
+									<li><a href="{{url('invoices')}}">Invoices</a></li>
+									<li><a href="{{url('payments')}}">Payments</a></li>
+									<li><a href="{{url('expenses')}}">Expenses</a></li>
+									<li><a href="{{url('providendfund')}}">Provident Fund</a></li>
+									<li><a href="{{url('taxes')}}">Taxes</a></li>
 								</ul>
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="la la-money"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="salary.html"> Employee Salary </a></li>
-									<li><a href="salary-view.html"> Payslip </a></li>
-									<li><a href="payroll-items.html"> Payroll Items </a></li>
+									<li><a href="{{url('employee-salary')}}"> Employee Salary </a></li>
+									<li><a href="{{url('payslip')}}"> Payslip </a></li>
+									<li><a href="{{url('payrollitems')}}"> Payroll Items </a></li>
 								</ul>
 							</li>
 							<li> 
-								<a href="policies.html"><i class="la la-file-pdf-o"></i> <span>Policies</span></a>
+								<a href="{{url('policies')}}"><i class="la la-file-pdf-o"></i> <span>Policies</span></a>
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="la la-pie-chart"></i> <span> Reports </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="expense-reports.html"> Expense Report </a></li>
-									<li><a href="invoice-reports.html"> Invoice Report </a></li>
+									<li><a href="{{url('expensereport')}}"> Expense Report </a></li>
+									<li><a href="{{url('invoicereport')}}"> Invoice Report </a></li>
 								</ul>
 							</li>
 							<li class="menu-title"> 
@@ -133,7 +133,7 @@
 								<span>Administration</span>
 							</li>
 							<li> 
-								<a href="assets.html"><i class="la la-object-ungroup"></i> <span>Assets</span></a>
+								<a href="{{url('assets')}}"><i class="la la-object-ungroup"></i> <span>Assets</span></a>
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="la la-briefcase"></i> <span> Jobs </span> <span class="menu-arrow"></span></a>
@@ -152,7 +152,7 @@
 								<a href="users.html"><i class="la la-user-plus"></i> <span>Users</span></a>
 							</li>
 							<li> 
-								<a href="settings.html"><i class="la la-cog"></i> <span>Settings</span></a>
+								<a href="{{url('setting')}}"><i class="la la-cog"></i> <span>Settings</span></a>
 							</li>
 							<li class="menu-title"> 
 								<span>Pages</span>

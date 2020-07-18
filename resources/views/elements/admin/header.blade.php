@@ -4,7 +4,7 @@
             <!-- Logo -->
             <div class="header-left">
                 <a href="index.html" class="logo">
-                    <img src="assets/img/logo.png" width="40" height="40" alt="">
+                    <img src="assets/img/tag_logo.png" width="40" height="40" alt="">
                 </a>
             </div>
             <!-- /Logo -->
@@ -19,7 +19,7 @@
             
             <!-- Header Title -->
             <div class="page-title-box">
-                <h3>Dreamguy's Technologies</h3>
+                <h3>Tagssoftwares</h3>
             </div>
             <!-- /Header Title -->
             
@@ -45,20 +45,20 @@
                 <!-- Flag -->
                 <li class="nav-item dropdown has-arrow flag-nav">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-                        <img src="assets/img/flags/us.png" alt="" height="20"> <span>English</span>
+                        <img src="" alt="" height="20"> <span>English</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
                         <a href="javascript:void(0);" class="dropdown-item">
-                            <img src="assets/img/flags/us.png" alt="" height="16"> English
+                            <img src="" alt="" height="16"> English
                         </a>
                         <a href="javascript:void(0);" class="dropdown-item">
-                            <img src="assets/img/flags/fr.png" alt="" height="16"> French
+                            <img src="" alt="" height="16"> French
                         </a>
                         <a href="javascript:void(0);" class="dropdown-item">
-                            <img src="assets/img/flags/es.png" alt="" height="16"> Spanish
+                            <img src="" alt="" height="16"> Spanish
                         </a>
                         <a href="javascript:void(0);" class="dropdown-item">
-                            <img src="assets/img/flags/de.png" alt="" height="16"> German
+                            <img src="" alt="" height="16"> German
                         </a>
                     </div>
                 </li>
@@ -67,7 +67,7 @@
                 <!-- Notifications -->
                 <li class="nav-item dropdown">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <i class="fa fa-bell-o"></i> <span class="badge badge-pill">3</span>
+                        <i class="fa fa-bell-o"></i> <span class="badge badge-pill"></span>
                     </a>
                     <div class="dropdown-menu notifications">
                         <div class="topnav-dropdown-header">
@@ -153,7 +153,7 @@
                 <!-- Message Notifications -->
                 <li class="nav-item dropdown">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <i class="fa fa-comment-o"></i> <span class="badge badge-pill">8</span>
+                        <i class="fa fa-comment-o"></i> <span class="badge badge-pill"></span>
                     </a>
                     <div class="dropdown-menu notifications">
                         <div class="topnav-dropdown-header">
@@ -171,10 +171,10 @@
                                                 </span>
                                             </div>
                                             <div class="list-body">
-                                                <span class="message-author">Richard Miles </span>
-                                                <span class="message-time">12:28 AM</span>
+                                                <span class="message-author"></span>
+                                                <span class="message-time"></span>
                                                 <div class="clearfix"></div>
-                                                <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                                <span class="message-content"></span>
                                             </div>
                                         </div>
                                     </a>
@@ -188,10 +188,10 @@
                                                 </span>
                                             </div>
                                             <div class="list-body">
-                                                <span class="message-author">John Doe</span>
-                                                <span class="message-time">6 Mar</span>
+                                                <span class="message-author"></span>
+                                                <span class="message-time"></span>
                                                 <div class="clearfix"></div>
-                                                <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                                <span class="message-content"></span>
                                             </div>
                                         </div>
                                     </a>
@@ -258,8 +258,8 @@
 
                 <li class="nav-item dropdown has-arrow main-drop">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <span class="user-img"><img src="assets/img/profiles/avatar-21.jpg" alt="">
-                        <span class="status online"></span></span>
+                        <!-- <span class="user-img"><img src="assets/img/profiles/avatar-21.jpg" alt=""> -->
+                        <!-- <span class="status online"></span></span> -->
                         <span>Admin</span>
                     </a>
                     <div class="dropdown-menu">
