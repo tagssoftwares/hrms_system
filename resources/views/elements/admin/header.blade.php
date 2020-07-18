@@ -19,11 +19,11 @@
             
             <!-- Header Title -->
             <div class="page-title-box">
-                <h3>Tagssoftwares</h3>
+              
 
-                <h3>HRMS System</h3>
+                <h3>HRM System</h3>
 
-                <h3>Tagssoftwares</h3>
+                
 
 
             </div>
