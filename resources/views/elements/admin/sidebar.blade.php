@@ -63,10 +63,10 @@
 								</ul>
 							</li>
 							<li> 
-								<a href="leads.html"><i class="la la-user-secret"></i> <span>Leads</span></a>
+								<a href="{{url('leads')}}"><i class="la la-user-secret"></i> <span>Leads</span></a>
 							</li>
 							<li> 
-								<a href="tickets.html"><i class="la la-ticket"></i> <span>Tickets</span></a>
+								<a href="'{{url('tickets')}}"><i class="la la-ticket"></i> <span>Tickets</span></a>
 							</li>
 							<li class="menu-title"> 
 								<span>HR</span>
@@ -106,29 +106,29 @@
 							<li class="submenu">
 								<a href="#"><i class="la la-graduation-cap"></i> <span> Performance </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="performance-indicator.html"> Performance Indicator </a></li>
-									<li><a href="performance.html"> Performance Review </a></li>
-									<li><a href="performance-appraisal.html"> Performance Appraisal </a></li>
+									<li><a href="{{url('performance_indicator')}}"> Performance Indicator </a></li>
+									<li><a href="{{url('performance_review')}}"> Performance Review </a></li>
+									<li><a href="{{url('performance-appraisal')}}"> Performance Appraisal </a></li>
 								</ul>
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="la la-crosshairs"></i> <span> Goals </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="goal-tracking.html"> Goal List </a></li>
-									<li><a href="goal-type.html"> Goal Type </a></li>
+									<li><a href="{{url('goal-tracking')}}"> Goal List </a></li>
+									<li><a href="{{url('goal-type')}}"> Goal Type </a></li>
 								</ul>
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="la la-edit"></i> <span> Training </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="training.html"> Training List </a></li>
-									<li><a href="trainers.html"> Trainers</a></li>
-									<li><a href="training-type.html"> Training Type </a></li>
+									<li><a href="{{url('training')}}"> Training List </a></li>
+									<li><a href="{{url('trainers')}}"> Trainers</a></li>
+									<li><a href="{{url('training-type')}}"> Training Type </a></li>
 								</ul>
 							</li>
-							<li><a href="promotion.html"><i class="la la-bullhorn"></i> <span>Promotion</span></a></li>
-							<li><a href="resignation.html"><i class="la la-external-link-square"></i> <span>Resignation</span></a></li>
-							<li><a href="termination.html"><i class="la la-times-circle"></i> <span>Termination</span></a></li>
+							<li><a href="{{url('promotion')}}"><i class="la la-bullhorn"></i> <span>Promotion</span></a></li>
+							<li><a href="{{url('resignation')}}"><i class="la la-external-link-square"></i> <span>Resignation</span></a></li>
+							<li><a href="{{url('termination')}}"><i class="la la-times-circle"></i> <span>Termination</span></a></li>
 							<li class="menu-title"> 
 								<span>Administration</span>
 							</li>
@@ -160,8 +160,8 @@
 							<li class="submenu">
 								<a href="#"><i class="la la-user"></i> <span> Profile </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="profile.html"> Employee Profile </a></li>
-									<li><a href="client-profile.html"> Client Profile </a></li>
+									<li><a href="{{url('profile')}}"> Employee Profile </a></li>
+									<li><a href="{{url('client-profile')}}"> Client Profile </a></li>
 								</ul>
 							</li>
 							<li class="submenu">
