@@ -19,20 +19,20 @@ Route::group(["namespace" => 'Admin', "prefix" => "admin"], function () {
 	//Route::get('/', ['as' => 'admin.getlogin', 'uses' => 'AdminController@index']);
 	//Route::post('login', ['as' => 'users.login', 'uses' => 'AdminController@admin_login']);
 });
-Route::get('dashboard', 'UserController@dashboard')->name('dashboard');
+//Route::get('dashboard', 'UserController@dashboard')->name('dashboard');
 
-<<<<<<< HEAD
-Route::post('admin_login', 'Admin\AdminController@admin_login');
+Route::get('admin_login', 'Admin\AdminController@admin_login');
 Route::get('logout', 'Admin\AdminController@logout');
 
 Route::get('userlist', 'Admin\UserController@index');
 Route::get('userform', 'Admin\UserController@view_create_form');
 
 Route::get('rolelist', 'Admin\RoleController@index');
-Route::get('roleform', 'Admin\RoleController@view_role_form');
-=======
+//Route::get('roleform', 'Admin\RoleController@view_role_form');
+Route::post('create_role', 'Admin\RoleController@create_role');
 
-Route::get('/', 'UserController@dashboard')->name('dashboard');
+
+//Route::get('/', 'UserController@dashboard')->name('dashboard');
 
 Route::get('/login', 'UserController@login')->name('login');
 Route::get('clients', ['as' => 'employee-management.Client.client', 'uses' => 'ClientController@client']);
@@ -99,4 +99,4 @@ Route::group(["namespace" => 'Project'], function () {
     
 
 
->>>>>>> b67e6c76a42d50af147e267d6ab4d7a314e32f98
+

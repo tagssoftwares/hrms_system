@@ -19,11 +19,7 @@
             
             <!-- Header Title -->
             <div class="page-title-box">
-<<<<<<< HEAD
                 <h3>HRMS System</h3>
-=======
-                <h3>Tagssoftwares</h3>
->>>>>>> b67e6c76a42d50af147e267d6ab4d7a314e32f98
             </div>
             <!-- /Header Title -->
             

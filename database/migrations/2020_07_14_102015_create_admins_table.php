@@ -24,7 +24,7 @@ class CreateAdminsTable extends Migration
             $table->string('name',100);
             $table->string('email',100)->unique();
             $table->string('password',100);
-            $table->string('user_type');
+            $table->string('role',100);
             $table->string('reset_code')->nullable();
             $table->dateTime('last_login')->nullable();
             $table->enum('email_verified',['yes','no'])->default('no');

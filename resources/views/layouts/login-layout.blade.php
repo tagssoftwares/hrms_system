@@ -38,6 +38,8 @@
 		<!-- /Main Wrapper -->
 		
 		<!-- jQuery -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
         <!-- <script src="asset/js/jquery-3.2.1.min.js"></script> -->
 		
 		<!-- Bootstrap Core JS -->
@@ -45,7 +47,7 @@
         <script src="assets/js/bootstrap.min.js"></script>
 		
 		<!-- Custom JS -->
-		<script src="assets/js/app.js"></script>
+		<!-- <script src="assets/js/app.js"></script> -->
 		
     </body>
 </html>
