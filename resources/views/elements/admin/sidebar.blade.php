@@ -1,8 +1,10 @@
-	<!-- Sidebar -->
+Sidebar -->
     <div class="sidebar" id="sidebar">
                 <div class="sidebar-inner slimscroll">
 					<div id="sidebar-menu" class="sidebar-menu">
 						<ul>
+							
+            
 							<li class="menu-title"> 
 								<span>Main</span>
 							</li>
@@ -12,6 +14,9 @@
 									<li><a class="active" href="{{url('dashboard')}}">Admin Dashboard</a></li>
 									<li><a href="{{url('emp_dashboard')}}">Employee Dashboard</a></li>
 								</ul>
+							</li>
+							<li> 
+								<a href="{{ url('dashboard') }}"><i class="la la-dashboard"></i> <span>Dashboard</span></a>
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="la la-cube"></i> <span> Apps</span> <span class="menu-arrow"></span></a>
@@ -32,6 +37,17 @@
 									<li><a href="file-manager.html">File Manager</a></li>
 								</ul>
 							</li>
+							<li class="submenu">
+								<a href="#"><i class="la la-key"></i> <span> User Management </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="{{url('rolelist')}}"> Roles </a></li>
+									<li><a href="{{ url('userlist') }}"> Users </a></li>
+									 <li><a href="forgot-password.html"> Forgot Password </a></li>
+									<li><a href="otp.html"> OTP </a></li>
+									<li><a href="lock-screen.html"> Lock Screen </a></li>
+								</ul>
+							</li>
+
 							<li class="menu-title"> 
 								<span>Employees</span>
 							</li>
@@ -67,6 +83,42 @@
 							</li>
 							<li> 
 								<a href="tickets.html"><i class="la la-ticket"></i> <span>Tickets</span></a>
+							</li>
+														<li class="menu-title"> 
+								<span>Pages</span>
+							</li> -->
+							 <li class="submenu">
+								<a href="#"><i class="la la-user"></i> <span> Profile </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="profile.html"> Employee Profile </a></li>
+									<li><a href="client-profile.html"> Client Profile </a></li>
+								</ul>
+							</li>
+							
+							<li class="submenu">
+								<a href="#"><i class="la la-exclamation-triangle"></i> <span> Error Pages </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="error-404.html">404 Error </a></li>
+									<li><a href="error-500.html">500 Error </a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="#"><i class="la la-hand-o-up"></i> <span> Subscriptions </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="subscriptions.html"> Subscriptions (Admin) </a></li>
+									<li><a href="subscriptions-company.html"> Subscriptions (Company) </a></li>
+									<li><a href="subscribed-companies.html"> Subscribed Companies</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="#"><i class="la la-columns"></i> <span> Pages </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="search.html"> Search </a></li>
+									<li><a href="faq.html"> FAQ </a></li>
+									<li><a href="terms.html"> Terms </a></li>
+									<li><a href="privacy-policy.html"> Privacy Policy </a></li>
+									<li><a href="blank-page.html"> Blank Page </a></li>
+								</ul>
 							</li>
 							<li class="menu-title"> 
 								<span>HR</span>
@@ -154,51 +206,7 @@
 							<li> 
 								<a href="{{url('setting')}}"><i class="la la-cog"></i> <span>Settings</span></a>
 							</li>
-							<li class="menu-title"> 
-								<span>Pages</span>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="la la-user"></i> <span> Profile </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="profile.html"> Employee Profile </a></li>
-									<li><a href="client-profile.html"> Client Profile </a></li>
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="la la-key"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="{{url('/login')}}"> Login </a></li>
-									<li><a href="register.html"> Register </a></li>
-									<li><a href="forgot-password.html"> Forgot Password </a></li>
-									<li><a href="otp.html"> OTP </a></li>
-									<li><a href="lock-screen.html"> Lock Screen </a></li>
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="la la-exclamation-triangle"></i> <span> Error Pages </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="error-404.html">404 Error </a></li>
-									<li><a href="error-500.html">500 Error </a></li>
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="la la-hand-o-up"></i> <span> Subscriptions </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="subscriptions.html"> Subscriptions (Admin) </a></li>
-									<li><a href="subscriptions-company.html"> Subscriptions (Company) </a></li>
-									<li><a href="subscribed-companies.html"> Subscribed Companies</a></li>
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="la la-columns"></i> <span> Pages </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="search.html"> Search </a></li>
-									<li><a href="faq.html"> FAQ </a></li>
-									<li><a href="terms.html"> Terms </a></li>
-									<li><a href="privacy-policy.html"> Privacy Policy </a></li>
-									<li><a href="blank-page.html"> Blank Page </a></li>
-								</ul>
-							</li>
+
 							<li class="menu-title"> 
 								<span>UI Interface</span>
 							</li>
@@ -231,8 +239,8 @@
 							</li>
 							<li> 
 								<a href="javascript:void(0);"><i class="la la-info"></i> <span>Change Log</span> <span class="badge badge-primary ml-auto">v3.4</span></a>
-							</li>
-							<li class="submenu">
+							</li> 
+							 <li class="submenu">
 								<a href="javascript:void(0);"><i class="la la-share-alt"></i> <span>Multi Level</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li class="submenu">
@@ -254,8 +262,11 @@
 									</li>
 								</ul>
 							</li>
+							<li> 
+								<a href="{{ url('logout') }}"><i class="la la-object-ungroup"></i> <span>Logout</span></a>
+							</li>
 						</ul>
 					</div>
                 </div>
             </div>
-			<!-- /Sidebar -->
+			<!-- /Sidebar-->

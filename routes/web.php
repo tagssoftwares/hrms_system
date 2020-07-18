@@ -146,6 +146,7 @@ Route::group(["namespace" => 'Report'], function () {
 Route::group(["namespace" => 'Administration'], function () {
 
     Route::get('setting', ['as' => 'administration.setting', 'uses' => 'SettingController@index']);
+    Route::get('setting', ['as' => 'administration.setting', 'uses' => 'SettingController@index']);
    
 });
 
