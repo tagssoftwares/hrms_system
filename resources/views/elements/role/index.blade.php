@@ -63,12 +63,13 @@
                                         <th class="text-right">Actions</th>
                                     </tr>
                                 </thead>
-                                @foreach ($rolename as $rolenames)
+                                
                                 <tbody>
-                                  
+                                <?php $i=1;  ?>
+                                @foreach ($rolename as $rolenames)
                                     <tr>
-                                      <?php $i=1;?>
-                                      <td>1</td>
+                                      
+                                      <td><?php echo $i;?></td>
                                         <td>
                                             {{ $rolenames->name }}
                                         </td>
@@ -97,9 +98,9 @@
                                         </td>
                                     </tr>
                                     <?php $i++;?>
-                                    
+                                    @endforeach
                                 </tbody>
-                                @endforeach
+                                
                             </table>
                         </div>
                     </div>
