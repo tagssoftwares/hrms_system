@@ -168,6 +168,25 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
+                                            <label class="col-form-label">Role <span class="text-danger">*</span></label>
+                                            <select class="form-control" name="role" onchange="roleChange(this.value)" id="role">
+                                    <option class="form-control" value="0">Please select your Role</option>
+                                    @foreach ($rolename as $role)
+                                        <option value="{{$role->id}}">{{$role->name}}</option>
+                                    @endforeach
+                                </select>
+                                            <input type="hidden" name="roleName" id="roleName">
+                                        </div>
+                                    </div>
+                                    <script type="text/javascript">
+                            function roleChange(id){
+                                $('#roleId').val(id);
+                                $('#roleName').val($("#role option:selected").text());
+                                
+                            }
+                        </script>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
                                             <label class="col-form-label">Password</label>
                                             <input class="form-control" type="password">
                                         </div>
@@ -190,254 +209,9 @@
                                             <div class="cal-icon"><input class="form-control datetimepicker" type="text"></div>
                                         </div>
                                     </div>
-                                    <!-- <div class="form-group">
-                                    <label class="control-label col-md-3">{{ trans('dob')}}</label>
-
-                                    <div class="col-md-3">
-                                        <div class="input-group input-medium date date-picker"
-                                             data-date-format="dd-mm-yyyy"
-                                             data-date-viewmode="years">
-                                            <input type="text" class="form-control" name="date_of_birth" readonly
-                                                   value="{{ old('date_of_birth')}}">
-                                            <span class="input-group-btn">
-                                        <button class="btn default" type="button"><i class="fa fa-calendar"></i>
-                                        </button>
-                                    </span>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
-                                <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="col-md-3 control-label">{{ trans('Gender')}}</label>
-
-                                    <div class="col-md-9">
-                                        {!! Form::select('gender', ['male' => __('male'), 'female' => __('female')], old('gender'),['class'=>'form-control']) !!}
-                                    </div>
-                                </div>
-                              </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label class="col-form-label">Mobile No. </label>
-                                            <input class="form-control" type="text">
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label class="col-form-label">Company</label>
-                                            <select class="select">
-                                                <option value="">Global Technologies</option>
-                                                <option value="1">Delta Infotech</option>
-                                            </select>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Department <span class="text-danger">*</span></label>
-                                            <select class="select">
-                                                <option>Select Department</option>
-                                                <option>Web Development</option>
-                                                <option>IT Management</option>
-                                                <option>Marketing</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Designation <span class="text-danger">*</span></label>
-                                            <select class="select">
-                                                <option>Select Designation</option>
-                                                <option>Web Designer</option>
-                                                <option>Web Developer</option>
-                                                <option>Android Developer</option>
-                                            </select>
-                                        </div>
-                                    </div> -->
-                                </div>
-                                <!-- <div class="table-responsive m-t-15">
-                                    <table class="table table-striped custom-table">
-                                        <thead>
-                                            <tr>
-                                                <th>Module Permission</th>
-                                                <th class="text-center">Read</th>
-                                                <th class="text-center">Write</th>
-                                                <th class="text-center">Create</th>
-                                                <th class="text-center">Delete</th>
-                                                <th class="text-center">Import</th>
-                                                <th class="text-center">Export</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Holidays</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Leaves</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Clients</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Projects</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tasks</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Chats</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Assets</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Timing Sheets</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div> -->
+                               
                                 <div class="submit-section">
                                     <button class="btn btn-primary submit-btn">Submit</button>
                                 </div>

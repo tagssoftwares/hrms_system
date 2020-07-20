@@ -79,10 +79,10 @@ Sidebar -->
 								</ul>
 							</li>
 							<li> 
-								<a href="leads.html"><i class="la la-user-secret"></i> <span>Leads</span></a>
+								<a href="{{url('leads')}}"><i class="la la-user-secret"></i> <span>Leads</span></a>
 							</li>
 							<li> 
-								<a href="tickets.html"><i class="la la-ticket"></i> <span>Tickets</span></a>
+								<a href="'{{url('tickets')}}"><i class="la la-ticket"></i> <span>Tickets</span></a>
 							</li>
 														<li class="menu-title"> 
 								<span>Pages</span>
@@ -158,29 +158,29 @@ Sidebar -->
 							<li class="submenu">
 								<a href="#"><i class="la la-graduation-cap"></i> <span> Performance </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="performance-indicator.html"> Performance Indicator </a></li>
-									<li><a href="performance.html"> Performance Review </a></li>
-									<li><a href="performance-appraisal.html"> Performance Appraisal </a></li>
+									<li><a href="{{url('performance_indicator')}}"> Performance Indicator </a></li>
+									<li><a href="{{url('performance_review')}}"> Performance Review </a></li>
+									<li><a href="{{url('performance-appraisal')}}"> Performance Appraisal </a></li>
 								</ul>
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="la la-crosshairs"></i> <span> Goals </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="goal-tracking.html"> Goal List </a></li>
-									<li><a href="goal-type.html"> Goal Type </a></li>
+									<li><a href="{{url('goal-tracking')}}"> Goal List </a></li>
+									<li><a href="{{url('goal-type')}}"> Goal Type </a></li>
 								</ul>
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="la la-edit"></i> <span> Training </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="training.html"> Training List </a></li>
-									<li><a href="trainers.html"> Trainers</a></li>
-									<li><a href="training-type.html"> Training Type </a></li>
+									<li><a href="{{url('training')}}"> Training List </a></li>
+									<li><a href="{{url('trainers')}}"> Trainers</a></li>
+									<li><a href="{{url('training-type')}}"> Training Type </a></li>
 								</ul>
 							</li>
-							<li><a href="promotion.html"><i class="la la-bullhorn"></i> <span>Promotion</span></a></li>
-							<li><a href="resignation.html"><i class="la la-external-link-square"></i> <span>Resignation</span></a></li>
-							<li><a href="termination.html"><i class="la la-times-circle"></i> <span>Termination</span></a></li>
+							<li><a href="{{url('promotion')}}"><i class="la la-bullhorn"></i> <span>Promotion</span></a></li>
+							<li><a href="{{url('resignation')}}"><i class="la la-external-link-square"></i> <span>Resignation</span></a></li>
+							<li><a href="{{url('termination')}}"><i class="la la-times-circle"></i> <span>Termination</span></a></li>
 							<li class="menu-title"> 
 								<span>Administration</span>
 							</li>
@@ -194,7 +194,7 @@ Sidebar -->
 									<li><a href="job-applicants.html"> Applied Candidates </a></li>
 								</ul>
 							</li>
-							<li> 
+							<!-- <li> 
 								<a href="knowledgebase.html"><i class="la la-question"></i> <span>Knowledgebase</span></a>
 							</li>
 							<li> 
@@ -208,6 +208,56 @@ Sidebar -->
 							</li>
 
 							<li class="menu-title"> 
+
+								<a href="settings.html"><i class="la la-cog"></i> <span>Settings</span></a>
+							</li> -->
+							<li class="menu-title"> 
+								<span>Pages</span>
+							</li>
+							<li class="submenu">
+								<a href="#"><i class="la la-user"></i> <span> Profile </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="{{url('profile')}}"> Employee Profile </a></li>
+									<li><a href="{{url('client-profile')}}"> Client Profile </a></li>
+								</ul>
+							</li>
+							<!-- <li class="submenu">
+								<a href="#"><i class="la la-key"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="{{url('/login')}}"> Login </a></li>
+									<li><a href="register.html"> Register </a></li>
+									<li><a href="forgot-password.html"> Forgot Password </a></li>
+									<li><a href="otp.html"> OTP </a></li>
+									<li><a href="lock-screen.html"> Lock Screen </a></li>
+								</ul>
+							</li> -->
+							<!-- <li class="submenu">
+								<a href="#"><i class="la la-exclamation-triangle"></i> <span> Error Pages </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="error-404.html">404 Error </a></li>
+									<li><a href="error-500.html">500 Error </a></li>
+								</ul>
+							</li> -->
+							<!-- <li class="submenu">
+								<a href="#"><i class="la la-hand-o-up"></i> <span> Subscriptions </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="subscriptions.html"> Subscriptions (Admin) </a></li>
+									<li><a href="subscriptions-company.html"> Subscriptions (Company) </a></li>
+									<li><a href="subscribed-companies.html"> Subscribed Companies</a></li>
+								</ul>
+							</li> -->
+							<!-- <li class="submenu">
+								<a href="#"><i class="la la-columns"></i> <span> Pages </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="search.html"> Search </a></li>
+									<li><a href="faq.html"> FAQ </a></li>
+									<li><a href="terms.html"> Terms </a></li>
+									<li><a href="privacy-policy.html"> Privacy Policy </a></li>
+									<li><a href="blank-page.html"> Blank Page </a></li>
+								</ul>
+							</li> -->
+							<!-- <li class="menu-title"> 
+>>>>>>> 9b0581659e77e6c090c50a681a5241707080e3af
 								<span>UI Interface</span>
 							</li>
 							<li> 
@@ -236,8 +286,8 @@ Sidebar -->
 							</li>
 							<li> 
 								<a href="#"><i class="la la-file-text"></i> <span>Documentation</span></a>
-							</li>
-							<li> 
+							</li> -->
+							<!-- <li> 
 								<a href="javascript:void(0);"><i class="la la-info"></i> <span>Change Log</span> <span class="badge badge-primary ml-auto">v3.4</span></a>
 							</li> 
 							 <li class="submenu">
@@ -265,12 +315,10 @@ Sidebar -->
 							<li> 
 								<a href="{{ url('logout') }}"><i class="la la-object-ungroup"></i> <span>Logout</span></a>
 							</li>
+							</li> -->
 						</ul>
 					</div>
                 </div>
             </div>
-<<<<<<< HEAD
 			<!-- /Sidebar-->
-=======
 			<!-- /Sidebar-->
->>>>>>> 7ec8384b42fcfd66e2599e6ad17d0c6e62b13b18

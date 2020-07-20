@@ -71,7 +71,7 @@
                             </div>
                         </section>
 
-                        <section class="dash-section">
+                        <!-- <section class="dash-section">
                             <h1 class="dash-sec-title">Tomorrow</h1>
                             <div class="dash-sec-content">
                                 <div class="dash-info-list">
@@ -218,7 +218,7 @@
                             </section>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
             <script>
@@ -309,20 +309,5 @@
 			}
 		});
 		</script>
-	<script src="http://localhost/hrms_system/assets/js/jquery-3.2.1.min.js"></script>
-		
-		<!-- Bootstrap Core JS -->
-        <script src="http://localhost/hrms_system/assets/js/popper.min.js"></script>
-        <script src="assets/js/bootstrap.min.js')}}"></script>
-		
-		<!-- Slimscroll JS -->
-		<script src="http://localhost/hrms_system/assets/js/jquery.slimscroll.min.js"></script>
-		
-		<!-- Chart JS -->
-		<script src="http://localhost/hrms_system/assets/plugins/morris/morris.min.js"></script>
-		<script src="http://localhost/hrms_system/assets/plugins/raphael/raphael.min.js"></script>
-		<script src="http://localhost/hrms_system/assets/js/chart.js"></script>
-		
-		<!-- Custom JS -->
-		<script src="http://localhost/hrms_system/assets/js/app.js"></script>
+	
 @endsection
