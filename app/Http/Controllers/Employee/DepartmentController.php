@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Employee;
 
 use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\Department;
 class DepartmentController extends Controller
 {
     /**
@@ -12,8 +15,9 @@ class DepartmentController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function department()
-    {
-       return view('employee-management.department.department');
+
+    {   $departments = Department::paginate(5);
+       return view('employee-management.department.department', ['departments' => $departments]);
     }
 
     /**
@@ -31,12 +35,12 @@ class DepartmentController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validateInput($request);
-         Department::create([
+     
+        $departments= Department::create([
             'name' => $request['department_name']
         ]);
 
-        return redirect()->intended('system-management/department');
+        return redirect()->intended('departments');
          }
 
     /**
