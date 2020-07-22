@@ -71,29 +71,27 @@
                                     <span class="text-xs">1</span> <span class="text-muted">open tasks, </span>
                                     <span class="text-xs">9</span> <span class="text-muted">tasks completed</span>
                                 </small>
-                                <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry. When an unknown printer took a galley of type and
-                                    scrambled it...
+                                <p class="text-muted">
                                 </p>
                                 <div class="pro-deadline m-b-15">
                                     <div class="sub-title">
                                         Deadline:
                                     </div>
                                     <div class="text-muted">
-                                        17 Apr 2019
+                                      
                                     </div>
                                 </div>
                                 <div class="project-members m-b-15">
                                     <div>Project Leader :</div>
                                     <ul class="team-members">
                                         <li>
-                                            <a href="#" data-toggle="tooltip" title="Jeffery Lalor"><img alt="" src="assets/img/profiles/avatar-16.jpg"></a>
+                                            <a href="#" data-toggle="tooltip" title="Jeffery Lalor"></a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="project-members m-b-15">
                                     <div>Team :</div>
-                                    <ul class="team-members">
+                                    <!-- <ul class="team-members">
                                         <li>
                                             <a href="#" data-toggle="tooltip" title="John Doe"><img alt="" src="assets/img/profiles/avatar-02.jpg"></a>
                                         </li>
@@ -158,9 +156,9 @@
                                                 </div>
                                             </div>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
-                                <p class="m-b-5">Progress <span class="text-success float-right">40%</span></p>
+                                <p class="m-b-5">Progress <span class="text-success float-right"></span></p>
                                 <div class="progress progress-xs mb-0">
                                     <div class="progress-bar bg-success" role="progressbar" data-toggle="tooltip" title="40%" style="width: 40%"></div>
                                 </div>
@@ -183,27 +181,25 @@
                                     <span class="text-xs">2</span> <span class="text-muted">open tasks, </span>
                                     <span class="text-xs">5</span> <span class="text-muted">tasks completed</span>
                                 </small>
-                                <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry. When an unknown printer took a galley of type and
-                                    scrambled it...
+                                <p class="text-muted">
                                 </p>
                                 <div class="pro-deadline m-b-15">
                                     <div class="sub-title">
                                         Deadline:
                                     </div>
                                     <div class="text-muted">
-                                        17 Apr 2019
+                                    
                                     </div>
                                 </div>
                                 <div class="project-members m-b-15">
                                     <div>Project Leader :</div>
                                     <ul class="team-members">
                                         <li>
-                                            <a href="#" data-toggle="tooltip" title="Jeffery Lalor"><img alt="" src="assets/img/profiles/avatar-16.jpg"></a>
+                                            <a href="#" data-toggle="tooltip" title="Jeffery Lalor"></a>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="project-members m-b-15">
+                                <!-- <div class="project-members m-b-15">
                                     <div>Team :</div>
                                     <ul class="team-members">
                                         <li>
@@ -271,8 +267,8 @@
                                             </div>
                                         </li>
                                     </ul>
-                                </div>
-                                <p class="m-b-5">Progress <span class="text-success float-right">40%</span></p>
+                                </div> -->
+                                <p class="m-b-5">Progress <span class="text-success float-right"></span></p>
                                 <div class="progress progress-xs mb-0">
                                     <div class="progress-bar bg-success" role="progressbar" data-toggle="tooltip" title="40%" style="width: 40%"></div>
                                 </div>
@@ -295,29 +291,27 @@
                                     <span class="text-xs">3</span> <span class="text-muted">open tasks, </span>
                                     <span class="text-xs">3</span> <span class="text-muted">tasks completed</span>
                                 </small>
-                                <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry. When an unknown printer took a galley of type and
-                                    scrambled it...
+                                <p class="text-muted">
                                 </p>
                                 <div class="pro-deadline m-b-15">
                                     <div class="sub-title">
                                         Deadline:
                                     </div>
                                     <div class="text-muted">
-                                        17 Apr 2019
+                                       
                                     </div>
                                 </div>
                                 <div class="project-members m-b-15">
                                     <div>Project Leader :</div>
                                     <ul class="team-members">
                                         <li>
-                                            <a href="#" data-toggle="tooltip" title="Jeffery Lalor"><img alt="" src="assets/img/profiles/avatar-16.jpg"></a>
+                                            <!-- <a href="#" data-toggle="tooltip" title="Jeffery Lalor"><img alt="" src="assets/img/profiles/avatar-16.jpg"></a> -->
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="project-members m-b-15">
                                     <div>Team :</div>
-                                    <ul class="team-members">
+                                    <!-- <ul class="team-members">
                                         <li>
                                             <a href="#" data-toggle="tooltip" title="John Doe"><img alt="" src="assets/img/profiles/avatar-02.jpg"></a>
                                         </li>
@@ -382,7 +376,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                                 <p class="m-b-5">Progress <span class="text-success float-right">40%</span></p>
                                 <div class="progress progress-xs mb-0">
@@ -402,14 +396,12 @@
                                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_project"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
                                     </div>
                                 </div>
-                                <h4 class="project-title"><a href="project-view.html">Hospital Administration</a></h4>
+                                <h4 class="project-title"><a href="project-view.html"></a></h4>
                                 <small class="block text-ellipsis m-b-15">
-                                    <span class="text-xs">12</span> <span class="text-muted">open tasks, </span>
-                                    <span class="text-xs">4</span> <span class="text-muted">tasks completed</span>
+                                    <span class="text-xs"></span> <span class="text-muted"></span>
+                                    <span class="text-xs"></span> <span class="text-muted"></span>
                                 </small>
-                                <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry. When an unknown printer took a galley of type and
-                                    scrambled it...
+                                <p class="text-muted">
                                 </p>
                                 <div class="pro-deadline m-b-15">
                                     <div class="sub-title">
@@ -423,13 +415,13 @@
                                     <div>Project Leader :</div>
                                     <ul class="team-members">
                                         <li>
-                                            <a href="#" data-toggle="tooltip" title="Jeffery Lalor"><img alt="" src="assets/img/profiles/avatar-16.jpg"></a>
+                                           
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="project-members m-b-15">
                                     <div>Team :</div>
-                                    <ul class="team-members">
+                                    <!-- <ul class="team-members">
                                         <li>
                                             <a href="#" data-toggle="tooltip" title="John Doe"><img alt="" src="assets/img/profiles/avatar-02.jpg"></a>
                                         </li>
@@ -494,9 +486,9 @@
                                                 </div>
                                             </div>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
-                                <p class="m-b-5">Progress <span class="text-success float-right">40%</span></p>
+                                <p class="m-b-5">Progress <span class="text-success float-right"></span></p>
                                 <div class="progress progress-xs mb-0">
                                     <div class="progress-bar bg-success" role="progressbar" data-toggle="tooltip" title="40%" style="width: 40%"></div>
                                 </div>
@@ -530,8 +522,8 @@
                                         <div class="form-group">
                                             <label>Client</label>
                                             <select class="select">
-                                                <option>Global Technologies</option>
-                                                <option>Delta Infotech</option>
+                                                <option></option>
+                                                <option></option>
                                             </select>
                                         </div>
                                     </div>
@@ -593,7 +585,7 @@
                                             <label>Team Leader</label>
                                             <div class="project-members">
                                                 <a href="#" data-toggle="tooltip" title="Jeffery Lalor" class="avatar">
-                                                    <img src="assets/img/profiles/avatar-16.jpg" alt="">
+                                                    <!-- <img src="assets/img/profiles/avatar-16.jpg" alt=""> -->
                                                 </a>
                                             </div>
                                         </div>
@@ -609,7 +601,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>Team Members</label>
-                                            <div class="project-members">
+                                            <!-- <div class="project-members">
                                                 <a href="#" data-toggle="tooltip" title="John Doe" class="avatar">
                                                     <img src="assets/img/profiles/avatar-16.jpg" alt="">
                                                 </a>
@@ -623,7 +615,7 @@
                                                     <img src="assets/img/profiles/avatar-05.jpg" alt="">
                                                 </a>
                                                 <span class="all-team">+2</span>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -668,8 +660,8 @@
                                         <div class="form-group">
                                             <label>Client</label>
                                             <select class="select">
-                                                <option>Global Technologies</option>
-                                                <option>Delta Infotech</option>
+                                                <option></option>
+                                                <option></option>
                                             </select>
                                         </div>
                                     </div>
@@ -731,7 +723,7 @@
                                             <label>Team Leader</label>
                                             <div class="project-members">
                                                 <a href="#" data-toggle="tooltip" title="Jeffery Lalor" class="avatar">
-                                                    <img src="assets/img/profiles/avatar-16.jpg" alt="">
+                                                    <!-- <img src="assets/img/profiles/avatar-16.jpg" alt=""> -->
                                                 </a>
                                             </div>
                                         </div>
@@ -747,7 +739,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>Team Members</label>
-                                            <div class="project-members">
+                                            <!-- <div class="project-members">
                                                 <a href="#" data-toggle="tooltip" title="John Doe" class="avatar">
                                                     <img src="assets/img/profiles/avatar-16.jpg" alt="">
                                                 </a>
@@ -761,7 +753,7 @@
                                                     <img src="assets/img/profiles/avatar-05.jpg" alt="">
                                                 </a>
                                                 <span class="all-team">+2</span>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>

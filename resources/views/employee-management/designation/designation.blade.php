@@ -262,10 +262,7 @@
                         </div>
                         <div class="modal-body">
                             <form>
-                                <div class="form-group">
-                                    <label>Designation Name <span class="text-danger">*</span></label>
-                                    <input class="form-control" type="text">
-                                </div>
+                               
                                 <div class="form-group">
                                     <label>Department <span class="text-danger">*</span></label>
                                     <select class="select">
@@ -274,6 +271,10 @@
                                         <option>IT Management</option>
                                         <option> 	Marketing</option>
                                     </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Designation Name <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text">
                                 </div>
                                 <div class="submit-section">
                                     <button class="btn btn-primary submit-btn">Submit</button>
