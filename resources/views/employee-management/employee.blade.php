@@ -67,6 +67,7 @@
                     </div>
                 </div>
                 <!-- Search Filter -->
+<<<<<<< HEAD
                 <div class="row">
                     <div class="col-md-12">
                         <div class="table-responsive">
@@ -124,6 +125,26 @@
                     </div>
                 </div>
                 
+=======
+                
+                <div class="row staff-grid-row">
+                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
+                        <div class="profile-widget">
+                          
+                            <div class="dropdown profile-action">
+                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_employee"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                </div>
+                            </div>
+                            <h4 class="user-name m-t-10 mb-0 text-ellipsis"><a href="profile">Priyanka Gondhule</a></h4>
+                            <div class="small text-muted">Web Designer</div>
+                        </div>
+                    </div>
+                           
+                    
+>>>>>>> 1d8900157f98b2ecc2e369f59de63504cacc4aba
                 <div id="add_employee" class="modal custom-modal fade" role="dialog">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">
@@ -763,9 +784,7 @@
                     </div>
                 </div>
             </div>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Launch demo modal
-</button>
+           
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">

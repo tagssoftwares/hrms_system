@@ -204,10 +204,12 @@ Sidebar -->
 								<a href="users.html"><i class="la la-user-plus"></i> <span>Users</span></a>
 							</li>
 							<li> 
+
 								<a href="{{url('setting')}}"><i class="la la-cog"></i> <span>Settings</span></a>
 							</li>
 
 							<li class="menu-title"> 
+
 
 								<a href="settings.html"><i class="la la-cog"></i> <span>Settings</span></a>
 							</li> -->
@@ -257,7 +259,7 @@ Sidebar -->
 								</ul>
 							</li> -->
 							<!-- <li class="menu-title"> 
->>>>>>> 9b0581659e77e6c090c50a681a5241707080e3af
+
 								<span>UI Interface</span>
 							</li>
 							<li> 
@@ -311,10 +313,12 @@ Sidebar -->
 										<a href="javascript:void(0);"> <span>Level 1</span></a>
 									</li>
 								</ul>
+
 							</li>
 							<li> 
 								<a href="{{ url('logout') }}"><i class="la la-object-ungroup"></i> <span>Logout</span></a>
 							</li>
+
 							</li> -->
 						</ul>
 					</div>

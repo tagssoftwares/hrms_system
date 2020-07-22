@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Role;
+use DB;
+use App\Models\Department;
+use App\Models\Designation;
 
 class UserController extends Controller
 {
@@ -12,10 +15,33 @@ class UserController extends Controller
     {
         //$users = DB::table('users')->select('*')->get();
         //return view('admin.users.view')->with('users',$users);
+        $employees = DB::table('employees')
+        ->leftJoin('Department', 'employees.department', '=', 'department.id')
+        ->leftJoin('Designation', 'employees.designation', '=', 'Designation.id')
+        /*->leftJoin('state', 'employees.state_id', '=', 'state.id')
+        ->leftJoin('country', 'employees.country_id', '=', 'country.id')
+        ->leftJoin('division', 'employees.division_id', '=', 'division.id')
+        ->select('employees.*', 'department.name as department_name', 'department.id as department_id', 'division.name as division_name', 'division.id as division_id')
+        ->paginate(5);*/
+         ->get();
+        $data = DB::table('Designation')
+            ->join('Department', 'Designation.department_id', '=','Department.id' )
+            ->select('Department.name', 'Designation.designation')
+            //->select('Department.name', 'Designation.designation', 'Employees.Age', 'Departments.Name')
+            ->get();
         $rolename = Role::all();
-    	return view('elements.users.index', ['rolename' => $rolename]);
+        $departments = Department::get();
+        $designations = Designation::get();
+    	return view('elements.users.index', ['rolename' => $rolename, 'employees' => $employees, 'departments' => $departments, 'designations' => $designations]);
     }
 
+    // public function demo()
+    // {
+    //  $department_list = DB::table('designation')
+    //      ->groupBy('department')
+    //      ->get();
+    //  return view('dynamic_dependent')->with('country_list', $country_list);
+    // }
     public function view_create_form()
     {
         //$rolename = Role::all();

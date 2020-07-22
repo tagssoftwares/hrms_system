@@ -46,8 +46,10 @@ class AdminController extends Controller
 
         // Check if admin exists in database with the credentials or not
 
-        if (auth()->guard('admin')->attempt($data, $remember)) {
-
+        //if (auth()->guard('admin')->attempt($data, $remember)) {
+            if ($data) {
+                # code...
+            
              /*else if ($admin->type == 'admin') {
 
                 $company = Company::where('id', '=', $admin->company_id)->first();

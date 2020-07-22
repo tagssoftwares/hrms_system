@@ -209,6 +209,82 @@
                                             <div class="cal-icon"><input class="form-control datetimepicker" type="text"></div>
                                         </div>
                                     </div>
+
+  <!--                                   <div class="col-md-6">
+                                       
+                                        <div class="form-group">
+                                            <label>Department <span class="text-danger">*</span></label>
+                                        <select class="select" class="js-department" name="department" id="department">
+                                                <option value="0">Select Department</option>
+                                                @foreach ($departments as $department)
+                                                <option value="{{$department->id}}">{{$department->name}}</option>
+                                                @endforeach
+                                          </select>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-md-6" id="design">
+                                        <div class="form-group">
+                                            <label>Designation <span class="text-danger">*</span></label>
+                                         <select class="select" class="js-designation" name="designation" id="designation">
+                                                <option value="0">Select Designation</option>
+                                                  @foreach ($designations as $designation)
+                                                  <option value="">{{$designation->designation}}</option>
+                                                @endforeach
+                                          </select>
+                                        </div>
+                                    </div> -->
+                                   
+                                    <div class="col-md-6">
+                                       
+                                        <div class="form-group">
+                                            <label>Department <span class="text-danger">*</span></label>
+                                        <select class="select form-control input-lg dynamic" data-dependent="designation" name="department" id="department">
+                                                <option value="0">Select Department</option>
+                                                @foreach ($departments as $department)
+                                                <option value="{{$department->id}}">{{$department->name}}</option>
+                                                @endforeach
+                                          </select>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Designation <span class="text-danger">*</span></label>
+                                         <select class="select form-control input-lg dynamic" name="designation" id="designation">
+                                                <option value="0">Select Designation</option>
+                                                  @foreach ($designations as $designation)
+                                                  <option value="">{{$designation->designation}}</option>
+                                                @endforeach
+                                          </select>
+                                        </div>
+                                    </div>
+                                    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+                                    <script>
+                                      function showDesignation(id){
+                                        //filter.addEventListener('change', showdesignation);
+                                      var selectBox = document.getElementById('department');
+                                      console.log(selectBox);
+                                      var userInput = selectBox.options[selectBox.selectedIndex].value;
+                                      console.log(userInput);
+                                      if (userInput == {{$department->id}}){
+                                      document.getElementById('design').style.display = 'block';
+                                          }else{
+                                      document.getElementById('design').style.display = 'none';
+                                      }
+                                      return false;}
+                                      </script>
+                                    <!-- <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Designation <span class="text-danger">*</span></label>
+                                         <select class="select" name="designation" id="designation">
+                                                <option value="0">Select Designation</option>
+                                                
+                                                
+                                          </select>
+                                        </div>
+                                    </div> -->
                                     
                                 </div>
                                
