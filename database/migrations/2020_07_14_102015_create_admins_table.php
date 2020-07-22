@@ -17,10 +17,6 @@ class CreateAdminsTable extends Migration
             
             $table->increments('id');
             $table->unsignedInteger('company_id')->nullable();
-            $table->foreign('company_id')
-                  ->references('id')->on('companies')
-                  ->onUpdate('cascade')
-                  ->onDelete('cascade');
             $table->string('name',100);
             $table->string('email',100)->unique();
             $table->string('password',100);

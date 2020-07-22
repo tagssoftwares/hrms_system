@@ -13,8 +13,9 @@ class DepartmentController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function department()
-    {
-       return view('employee-management.department.department');
+
+    {  
+       return view('employee-management.department.department', ['departments' => $departments]);
     }
 
     /**
@@ -35,7 +36,12 @@ class DepartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $this->validateInput($request);
+         Department::create([
+            'name' => $request['name']
+        ]);
+
+        return redirect()->intended('department/store');
     }
 
     /**

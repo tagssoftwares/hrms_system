@@ -27,7 +27,7 @@ Route::get('clients', ['as' => 'employee-management.Client.client', 'uses' => 'C
 Route::group(["namespace" => 'Employee'], function () {
 
     Route::get('employee', ['as' => 'employee-management.employee', 'uses' => 'EmployeeController@emp']);
-
+    Route::get('department/store', ['as' => 'employee-management.department.department', 'uses' => 'EmployeeController@store']);
 
 });
 
@@ -37,12 +37,14 @@ Route::group(["namespace" => 'Employee'], function () {
 /* HolidayController */
 Route::group(["namespace" => 'Employee'], function () {
 
-    Route::get('holiday', ['as' => 'employee-management.holiday.holidays', 'uses' => 'HolidayController@holidays']);
+    Route::get('holiday', ['as' => 'employee-management.holiday.holidays', 'uses' => 'HolidayController@index']);
     Route::get('attendance-employee', ['as' => 'employee-management.attendance.employee_attendance', 'uses' => 'AttendanceempController@attendance']);
     Route::get('departments', ['as' => 'employee-management.department.department', 'uses' => 'DepartmentController@department']);
     Route::get('designations', ['as' => 'employee-management.department.department', 'uses' => 'DesignationController@desig']);
     Route::get('timesheet', ['as' => 'employee-management.timesheet.timesheet', 'uses' => 'TimesheetController@timeshet']);
     Route::get('overtime', ['as' => 'employee-management.overtime.overtime', 'uses' => 'OvertimeController@ovr_time']);
+
+    Route::POST('holiday/store', ['as' => 'employee-management.holiday.holidays', 'uses' => 'HolidayController@store']);
 
 
 });

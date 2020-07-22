@@ -129,10 +129,11 @@
 								</button>
 							</div>
 							<div class="modal-body">
-								<form>
+								<form action="{{url('department/store')}}" method="POST">
+								{{ csrf_field() }}
 									<div class="form-group">
 										<label>Department Name <span class="text-danger">*</span></label>
-										<input class="form-control" type="text">
+										<input class="form-control" type="text" name="department_name">
 									</div>
 									<div class="submit-section">
 										<button class="btn btn-primary submit-btn">Submit</button>
