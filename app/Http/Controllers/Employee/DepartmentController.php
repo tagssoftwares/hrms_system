@@ -46,7 +46,7 @@ class DepartmentController extends Controller
     }
 
 
-         }
+         
 
     /**
      * Display the specified resource.
