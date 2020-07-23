@@ -14,12 +14,14 @@ class CreateResignationTable extends Migration
     public function up()
     {
         Schema::create('resignation', function (Blueprint $table) {
-            $table->increments('id', true);
+            $table->increments('id');
             $table->integer('employees_id')->unsigned();
-            $table->foreign('employees_id')->references('id')->on('employees');
-            $table->date('notice_date', 60);
-            $table->date('resignation_date', 60);
-            $table->string('reasons', 100);
+            $table->foreign('employees_id')
+                    ->references('id')->on('employees')
+                    ->unsigned()->index();
+            $table->date('notice_date');
+            $table->date('resignation_date');
+            $table->string('reason');
             $table->timestamps();
         });
     }

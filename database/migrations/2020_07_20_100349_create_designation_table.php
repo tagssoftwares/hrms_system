@@ -17,8 +17,8 @@ class CreateDesignationTable extends Migration
             $table->increments('id');
             $table->integer('department_id')->unsigned();
 			$table->foreign('department_id')
-      			  ->references('id')->on('department')
-                    ->unsigned()->index();
+                    ->references('id')->on('department')
+                    ->unasigned()->index();
             $table->string('designation',100);
             $table->timestamps();
         });
