@@ -13,7 +13,8 @@ class Goal_TypeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+
+    {   $goals = Goaltype::paginate(5);
        return view('Goals.goal_type.goal_type');
     }
 
@@ -35,7 +36,13 @@ class Goal_TypeController extends Controller
      */
     public function store(Request $request)
     {
-        $
+        $goals= Goaltype::create([
+            'goal_type' => $request['goal_type'],
+            'goal_discription' => $request['goal_discription']
+            
+        ]);
+
+        return redirect()->intended('goal-type');
     }
 
     /**

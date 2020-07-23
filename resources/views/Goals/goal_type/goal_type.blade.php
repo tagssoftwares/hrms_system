@@ -106,11 +106,11 @@
                             <form>
                                 <div class="form-group">
                                     <label>Goal Type <span class="text-danger">*</span></label>
-                                    <input class="form-control" type="text">
+                                    <input class="form-control" type="text" name="goal_type">
                                 </div>
                                 <div class="form-group">
                                     <label>Description <span class="text-danger">*</span></label>
-                                    <textarea class="form-control" rows="4"></textarea>
+                                    <textarea class="form-control" rows="4" name="goal_discription"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-form-label">Status</label>
