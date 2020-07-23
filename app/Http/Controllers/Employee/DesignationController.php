@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Employee;
-
+use App\Models\Department;
+use App\Models\Designation;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use DB;
 
 class DesignationController extends Controller
 {
@@ -12,9 +14,14 @@ class DesignationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function desig()
-    {
-       return view('employee-management.designation.designation');
+    public function index()
+
+    {  $departments = Department::get();
+       $data = DB::table('Designation')
+             ->join('Department','Designation.department_id','=','Department.id')
+             ->select('Department.name','Designation.designation')
+             ->get();
+       return view('employee-management.designation.designation', ['departments' => $departments,'data' =>$data]);
     }
 
     /**
@@ -35,10 +42,16 @@ class DesignationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Designation::create([
+            'department_id' => $request['department'],
+            'designation' => $request['designation']
+        ]);
+
+        return redirect()->intended('designations');
     }
 
     /**
+   
      * Display the specified resource.
      *
      * @param  int  $id

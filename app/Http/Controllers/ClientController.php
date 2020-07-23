@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\Client;
 
 class ClientController extends Controller
 {
@@ -11,9 +13,9 @@ class ClientController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function client()
-    {
-        return view('Clients.client');
+    public function index()
+    {   $clients = Client::get();
+        return view('Clients.client',['clients'=>$clients]);
     }
 
     /**
@@ -34,7 +36,19 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $clients= Client::create([
+            'first_name' => $request['first_name'],
+            'last_name' => $request['last_name'],
+            'Username' => $request['Username'],
+            'email' => $request['email'],
+            'password' => $request['password'],
+            'confirm_password' => $request['confirm_password'],
+            'clientID' => $request['clientID'],
+            'phone_number' => $request['phone_number'],
+            'company_name' => $request['company_name']
+        ]);
+
+        return redirect()->intended('clients');
     }
 
     /**

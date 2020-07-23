@@ -6,12 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Designation extends Model
 {
-    protected $fillable = [];
+    protected $fillable = ['department_id','designation'];
     protected $table = 'designation';
     protected $guarded = ['id'];
 
-    protected function department()
-    {
-        return $this->belongsTo('App\Models\Department', 'department_id', 'id');
-    }
+   
 }
