@@ -33,12 +33,9 @@
                                 </thead>
                                
                                 <tbody>
-                               @foreach ($data as $data)
-                                    <tr role="row" class="odd">
-                                        <td>1</td>
-                                        <td>{{ $data -> designation}}</td>
-                                        <td>{{ $data -> name}}</td>
-                                   <?php $i=1;?>  @foreach ($data as $data)
+                               
+                                   
+                                <?php $i=1;?>@foreach ($data as $data)
                                     <tr>
                                         <td><?php echo $i;?></td>
                                         <td>{{$data->designation}}</td>
@@ -50,10 +47,10 @@
                                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_designation"><i class="fa fa-pencil m-r-5"></i> Edit</a>
                                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_designation"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
                                             </div>
-                                            </div>
+                                        </div>
                                         </td>
                                     </tr>
-                                     @endforeach
+                                  
                                        
                                     <?php $i++;?>
                                     @endforeach
@@ -77,14 +74,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form method="POST" action="{{url('designation/store')}}">
-                            {{ csrf_field() }}
-                                <div class="form-group">
-                                    <label>Department <span class="text-danger">*</span></label>
-                                    <select class="select" id="department" name="department">
-                                        <option class="form-control" value="0">Select Department</option>
-                                        @foreach($departments as $department)
-                            
+                           
                                 <form action="{{ url('designation/store') }}" method="POST">
                                {{ csrf_field() }}
                                 <div class="form-group">
