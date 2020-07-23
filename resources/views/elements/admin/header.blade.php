@@ -267,13 +267,10 @@
 
                 <li class="nav-item dropdown has-arrow main-drop">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-<<<<<<< HEAD
                         <!-- <span class="user-img"><img src="assets/img/profiles/avatar-21.jpg" alt=""> -->
-=======
 
                         <!-- <span class="user-img"><img src="assets/img/profiles/avatar-21.jpg" alt=""> -->
 
->>>>>>> c41c003d9557856612d2ebcce0bb73398131776c
                         <span class="user-img"><img src="assets/img/profiles/" alt="">
                         <!-- <span class="status online"></span></span> -->
                         <span>Admin</span>
