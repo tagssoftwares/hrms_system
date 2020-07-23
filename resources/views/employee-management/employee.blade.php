@@ -30,10 +30,7 @@
                         </div>
                         <div class="col-auto float-right ml-auto">
                             <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_employee"><i class="fa fa-plus"></i> Add Employee</a>
-                            <div class="view-icons">
-                                <a href="employees" class="grid-view btn btn-link active"><i class="fa fa-th"></i></a>
-                                <a href="employees-list" class="list-view btn btn-link"><i class="fa fa-bars"></i></a>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -56,13 +53,13 @@
                     <div class="col-sm-6 col-md-3"> 
                         <div class="form-group form-focus select-focus">
                             <select class="select floating" > 
-                                <option >Select Designation</option>
+                                <option >Select Role</option>
                                 <option value="Web Developer">Web Developer</option>
                                 <option value="Web Designer">Web Designer</option>
                                 <option value="Android Developer">Android Developer</option>
                                 <option value="Ios Developer">Ios Developer</option>
                             </select>
-                            <label class="focus-label">Designation</label>
+                            
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3">  
@@ -70,6 +67,65 @@
                     </div>
                 </div>
                 <!-- Search Filter -->
+<<<<<<< HEAD
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table mb-0 datatable">
+                                <thead>
+                                    <tr>
+                                      <th>Sr.No.</th>
+                                        <th>Employee Name</th>
+                                        <th>Employee ID</th>
+                                        <th>Email</th>
+                                        <th>Roles</th>
+                                        <th class="text-center">Status</th>
+                                        <th class="text-right">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                      <td>1</td>
+                                        <td>
+                                            <h2 class="table-avatar">
+                                                <a href="profile" class="avatar"><img alt="" src="img/profiles/avatar-09.jpg"></a>
+                                                <a href="#">Richard Miles <span></span></a>
+                                            </h2>
+                                        </td>
+                                        <td>Casual Leave</td>
+                                        <td>8 Mar 2019</td>
+                                        <td>9 Mar 2019</td>
+                                        <td class="text-center">
+                                            <div class="dropdown action-label">
+                                                <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                                                    <i class="fa fa-dot-circle-o text-purple"></i> New
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-purple"></i> New</a>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-info"></i> Pending</a>
+                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#approve_leave"><i class="fa fa-dot-circle-o text-success"></i> Approved</a>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Declined</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">
+                                            <div class="dropdown dropdown-action">
+                                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_leave"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_approve"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+=======
                 
                 <div class="row staff-grid-row">
                     <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
@@ -88,6 +144,7 @@
                     </div>
                            
                     
+>>>>>>> 1d8900157f98b2ecc2e369f59de63504cacc4aba
                 <div id="add_employee" class="modal custom-modal fade" role="dialog">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">
@@ -103,6 +160,12 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label class="col-form-label">First Name <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="col-form-label">Middel Name</label>
                                             <input class="form-control" type="text">
                                         </div>
                                     </div>
@@ -148,13 +211,38 @@
                                             <div class="cal-icon"><input class="form-control datetimepicker" type="text"></div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label class="col-form-label">Phone </label>
-                                            <input class="form-control" type="text">
+                                    <!-- <div class="form-group">
+                                    <label class="control-label col-md-3">{{ trans('dob')}}</label>
+
+                                    <div class="col-md-3">
+                                        <div class="input-group input-medium date date-picker"
+                                             data-date-format="dd-mm-yyyy"
+                                             data-date-viewmode="years">
+                                            <input type="text" class="form-control" name="date_of_birth" readonly
+                                                   value="{{ old('date_of_birth')}}">
+                                            <span class="input-group-btn">
+                                        <button class="btn default" type="button"><i class="fa fa-calendar"></i>
+                                        </button>
+                                    </span>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">{{ trans('Gender')}}</label>
+
+                                    <div class="col-md-9">
+                                        {!! Form::select('gender', ['male' => __('male'), 'female' => __('female')], old('gender'),['class'=>'form-control']) !!}
+                                    </div>
+                                </div>
+                              </div>
                                     <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="col-form-label">Mobile No. </label>
+                                            <input class="form-control" type="text">
+                                        </div>
+                                    </div> -->
+                                    <!-- <div class="col-sm-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Company</label>
                                             <select class="select">
@@ -162,8 +250,8 @@
                                                 <option value="1">Delta Infotech</option>
                                             </select>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6">
+                                    </div> -->
+                                    <!-- <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Department <span class="text-danger">*</span></label>
                                             <select class="select">
@@ -184,9 +272,9 @@
                                                 <option>Android Developer</option>
                                             </select>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
-                                <div class="table-responsive m-t-15">
+                                <!-- <div class="table-responsive m-t-15">
                                     <table class="table table-striped custom-table">
                                         <thead>
                                             <tr>
@@ -370,7 +458,7 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                </div>
+                                </div> -->
                                 <div class="submit-section">
                                     <button class="btn btn-primary submit-btn">Submit</button>
                                 </div>
@@ -725,11 +813,11 @@
  <!-- jQuery -->
  <script src="{{asset('assets/js/jquery-3.2.1.min.js')}}"></script>
 
-		
-		<script>
-		 $(document).ready(function(){
+    
+    <script>
+     $(document).ready(function(){
 
-		
+    
 
 
 
@@ -741,84 +829,84 @@
             $("#result b").html($(this).val());
         });
     });        
-		$(".header").stick_in_parent({
-			
-		});
-		// This is for the sticky sidebar    
-		$(".stickyside").stick_in_parent({
-			offset_top: 60
-		});
-		$('.stickyside a').click(function() {
-			$('html, body').animate({
-				scrollTop: $($(this).attr('href')).offset().top - 60
-			}, 500);
-			return false;
-		});
-		// This is auto select left sidebar
-		// Cache selectors
-		// Cache selectors
-		var lastId,
-			topMenu = $(".stickyside"),
-			topMenuHeight = topMenu.outerHeight(),
-			// All list items
-			menuItems = topMenu.find("a"),
-			// Anchors corresponding to menu items
-			scrollItems = menuItems.map(function() {
-				var item = $($(this).attr("href"));
-				if (item.length) {
-					return item;
-				}
-			});
+    $(".header").stick_in_parent({
+      
+    });
+    // This is for the sticky sidebar    
+    $(".stickyside").stick_in_parent({
+      offset_top: 60
+    });
+    $('.stickyside a').click(function() {
+      $('html, body').animate({
+        scrollTop: $($(this).attr('href')).offset().top - 60
+      }, 500);
+      return false;
+    });
+    // This is auto select left sidebar
+    // Cache selectors
+    // Cache selectors
+    var lastId,
+      topMenu = $(".stickyside"),
+      topMenuHeight = topMenu.outerHeight(),
+      // All list items
+      menuItems = topMenu.find("a"),
+      // Anchors corresponding to menu items
+      scrollItems = menuItems.map(function() {
+        var item = $($(this).attr("href"));
+        if (item.length) {
+          return item;
+        }
+      });
 
-		// Bind click handler to menu items
+    // Bind click handler to menu items
 
 
-		// Bind to scroll
-		$(window).scroll(function() {
-			// Get container scroll position
-			var fromTop = $(this).scrollTop() + topMenuHeight - 250;
+    // Bind to scroll
+    $(window).scroll(function() {
+      // Get container scroll position
+      var fromTop = $(this).scrollTop() + topMenuHeight - 250;
 
-			// Get id of current scroll item
-			var cur = scrollItems.map(function() {
-				if ($(this).offset().top < fromTop)
-					return this;
-			});
-			// Get the id of the current element
-			cur = cur[cur.length - 1];
-			var id = cur && cur.length ? cur[0].id : "";
+      // Get id of current scroll item
+      var cur = scrollItems.map(function() {
+        if ($(this).offset().top < fromTop)
+          return this;
+      });
+      // Get the id of the current element
+      cur = cur[cur.length - 1];
+      var id = cur && cur.length ? cur[0].id : "";
 
-			if (lastId !== id) {
-				lastId = id;
-				// Set/remove active class
-				menuItems
-					.removeClass("active")
-					.filter("[href='#" + id + "']").addClass("active");
-			}
-		});
-		$(function () {
-			$(document).on("click", '.btn-add-row', function () {
-				var id = $(this).closest("table.table-review").attr('id');  // Id of particular table
-				console.log(id);
-				var div = $("<tr />");
-				div.html(GetDynamicTextBox(id));
-				$("#"+id+"_tbody").append(div);
-			});
-			$(document).on("click", "#comments_remove", function () {
-				$(this).closest("tr").prev().find('td:last-child').html('<button type="button" class="btn btn-danger" id="comments_remove"><i class="fa fa-trash-o"></i></button>');
-				$(this).closest("tr").remove();
-			});
-			function GetDynamicTextBox(table_id) {
-				$('#comments_remove').remove();
-				var rowsLength = document.getElementById(table_id).getElementsByTagName("tbody")[0].getElementsByTagName("tr").length+1;
-				return '<td>'+rowsLength+'</td>' + '<td><input type="text" name = "DynamicTextBox" class="form-control" value = "" ></td>' + '<td><input type="text" name = "DynamicTextBox" class="form-control" value = "" ></td>' + '<td><input type="text" name = "DynamicTextBox" class="form-control" value = "" ></td>' + '<td><button type="button" class="btn btn-danger" id="comments_remove"><i class="fa fa-trash-o"></i></button></td>'
-			}
-		});
-		</script>
-	
+      if (lastId !== id) {
+        lastId = id;
+        // Set/remove active class
+        menuItems
+          .removeClass("active")
+          .filter("[href='#" + id + "']").addClass("active");
+      }
+    });
+    $(function () {
+      $(document).on("click", '.btn-add-row', function () {
+        var id = $(this).closest("table.table-review").attr('id');  // Id of particular table
+        console.log(id);
+        var div = $("<tr />");
+        div.html(GetDynamicTextBox(id));
+        $("#"+id+"_tbody").append(div);
+      });
+      $(document).on("click", "#comments_remove", function () {
+        $(this).closest("tr").prev().find('td:last-child').html('<button type="button" class="btn btn-danger" id="comments_remove"><i class="fa fa-trash-o"></i></button>');
+        $(this).closest("tr").remove();
+      });
+      function GetDynamicTextBox(table_id) {
+        $('#comments_remove').remove();
+        var rowsLength = document.getElementById(table_id).getElementsByTagName("tbody")[0].getElementsByTagName("tr").length+1;
+        return '<td>'+rowsLength+'</td>' + '<td><input type="text" name = "DynamicTextBox" class="form-control" value = "" ></td>' + '<td><input type="text" name = "DynamicTextBox" class="form-control" value = "" ></td>' + '<td><input type="text" name = "DynamicTextBox" class="form-control" value = "" ></td>' + '<td><button type="button" class="btn btn-danger" id="comments_remove"><i class="fa fa-trash-o"></i></button></td>'
+      }
+    });
+    </script>
+  
 `
          
 
          
-		
-		
-		@endsection
+    
+    
+    @endsection

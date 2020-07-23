@@ -6,7 +6,6 @@ use App\Models\Designation;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
-
 class DesignationController extends Controller
 {
     /**
@@ -29,10 +28,7 @@ class DesignationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -48,7 +44,15 @@ class DesignationController extends Controller
         ]);
 
         return redirect()->intended('designations');
+        $designation= Designation::create([
+            'department_id' => $request['department'],
+            'designation' => $request['designation'],
+        ]);
+
+        return redirect()->intended('designations');
+
     }
+    
 
     /**
    

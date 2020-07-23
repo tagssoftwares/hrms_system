@@ -30,74 +30,35 @@
                         <table class="table table-striped custom-table mb-0">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Title </th>
+                                    <th>Sr.No.</th>
+                                    <th>Holiday Name </th>
                                     <th>Holiday Date</th>
-                                    <th>Day</th>
+                                
                                     <th class="text-right">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="holiday-completed">
-                                   
-                                </tr>
-                                <tr class="holiday-completed">
+                               <?php $i=1;?> @foreach ($holiday as $holiday)
+                                <tr>
+                                
+                                    <td> <?php echo $i;?> </td>
+                                    <td>{{ $holiday->holiday_name }}</td>
+                                    <td>{{ $holiday->holiday_date }}</td>
                                     
-                                </tr>
-                                <tr class="holiday-completed">
-                                    
-                                </tr>
-                                <tr class="holiday-completed">
+                                    <td class="text-right">
+                                        <div class="dropdown dropdown-action">
+                                            <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_holiday"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_holiday"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    </tr>
                                    
-                                </tr>
-                                <tr class="holiday-completed">
-                                  
-                                </tr>
-                                <tr class="holiday-upcoming">
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td class="text-right">
-                                        <div class="dropdown dropdown-action">
-                                            <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_holiday"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_holiday"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="holiday-upcoming">
-                                    <td>7</td>
-                                    <td>Deepavali</td>
-                                    <td>18 Oct 2019</td>
-                                    <td>Wednesday</td>
-                                    <td class="text-right">
-                                        <div class="dropdown dropdown-action">
-                                            <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_holiday"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_holiday"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="holiday-upcoming">
-                                    <td>8</td>
-                                    <td>Christmas</td>
-                                    <td>25 Dec 2019</td>
-                                    <td>Monday</td>
-                                    <td class="text-right">
-                                        <div class="dropdown dropdown-action">
-                                            <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_holiday"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_holiday"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
+                                 
+                                    <?php $i++;?>
+                                    @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -117,14 +78,15 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form action="{{url('holiday/store')}}" method="POST">
+                        {{ csrf_field() }}
                             <div class="form-group">
                                 <label>Holiday Name <span class="text-danger">*</span></label>
-                                <input class="form-control" type="text">
+                                <input class="form-control" type="text" name="holiday_name">
                             </div>
                             <div class="form-group">
                                 <label>Holiday Date <span class="text-danger">*</span></label>
-                                <div class="cal-icon"><input class="form-control datetimepicker" type="text"></div>
+                                <div class="cal-icon"><input class="form-control datetimepicker" type="text" name="holiday_date"></div>
                             </div>
                             <div class="submit-section">
                                 <button class="btn btn-primary submit-btn">Submit</button>

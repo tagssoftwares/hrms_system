@@ -25,18 +25,24 @@
                             <table class="table table-striped custom-table mb-0 datatable">
                                 <thead>
                                     <tr>
-                                        <th style="width: 30px;">#</th>
+                                        <th style="width: 30px;">Sr.No.</th>
                                         <th>Designation </th>
                                         <th>Department </th>
                                         <th class="text-right">Action</th>
                                     </tr>
                                 </thead>
+                               
                                 <tbody>
                                @foreach ($data as $data)
                                     <tr role="row" class="odd">
                                         <td>1</td>
                                         <td>{{ $data -> designation}}</td>
                                         <td>{{ $data -> name}}</td>
+                                   <?php $i=1;?>  @foreach ($data as $data)
+                                    <tr>
+                                        <td><?php echo $i;?></td>
+                                        <td>{{$data->designation}}</td>
+                                        <td>{{$data->name}}</td>
                                         <td class="text-right">
                                         <div class="dropdown dropdown-action">
                                                 <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
@@ -49,7 +55,10 @@
                                     </tr>
                                      @endforeach
                                        
+                                    <?php $i++;?>
+                                    @endforeach
                                 </tbody>
+                                
                             </table>
                         </div>
                     </div>
@@ -75,6 +84,14 @@
                                     <select class="select" id="department" name="department">
                                         <option class="form-control" value="0">Select Department</option>
                                         @foreach($departments as $department)
+                            
+                                <form action="{{ url('designation/store') }}" method="POST">
+                               {{ csrf_field() }}
+                                <div class="form-group">
+                                    <label>Department <span class="text-danger">*</span></label>
+                                    <select class="select" name="department" id="department">
+                                        <option>Select Department</option>
+                                        @foreach ($departments as $department)
                                         <option value="{{$department->id}}">{{$department->name}}</option>
                                         @endforeach
                                     </select>
@@ -82,6 +99,7 @@
                                 <div class="form-group">
                                     <label>Designation Name <span class="text-danger">*</span></label>
                                     <input class="form-control" type="text" name="designation">
+                                    <input class="form-control" type="text" name="designation" id="designation">
                                 </div>
                                 <div class="submit-section">
                                     <button class="btn btn-primary submit-btn">Submit</button>

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Employee;
 
 use App\Http\Controllers\Controller;
+use App\Models\Holiday;
 use Illuminate\Http\Request;
+use DB;
 
 class HolidayController extends Controller
 {
@@ -12,9 +14,12 @@ class HolidayController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function holidays()
+    public function index()
     {
-        return view('employee-management.holiday.holidays');
+        
+        $holiday = DB::table('holiday')->get();
+    
+        return view('employee-management.holiday.holidays',['holiday' => $holiday]);
     }
 
     /**
@@ -24,7 +29,7 @@ class HolidayController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -35,7 +40,15 @@ class HolidayController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      
+
+         $holiday = Holiday::create([
+            'holiday_name' => $request['holiday_name'],
+            'holiday_date' => $request['holiday_date']
+        ]);
+
+        return redirect()->intended('holiday');
+    
     }
 
     /**

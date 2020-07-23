@@ -12,10 +12,10 @@ class UserController extends Controller
         return view('censor.dashboard');
     }
 
-    public function login(Request $request){
+    // public function login(Request $request){
 
-        return view('users.login');
-    }
+    //     return view('users.login');
+    // }
 
 
 }
