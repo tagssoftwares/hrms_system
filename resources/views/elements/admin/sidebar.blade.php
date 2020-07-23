@@ -15,9 +15,7 @@ Sidebar -->
 									<li><a href="{{url('emp_dashboard')}}">Employee Dashboard</a></li>
 								</ul>
 							</li>
-							<li> 
-								<a href="{{ url('dashboard') }}"><i class="la la-dashboard"></i> <span>Dashboard</span></a>
-							</li>
+						
 							<li class="submenu">
 								<a href="#"><i class="la la-cube"></i> <span> Apps</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
