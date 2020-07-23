@@ -51,11 +51,8 @@
                 <!-- Flag -->
                 <li class="nav-item dropdown has-arrow flag-nav">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-<<<<<<< HEAD
                         <img src="" alt="" height="20"> <span>English</span>
-=======
                         <!-- <img src="assets/img/flags/us.png" alt="" height="20"> <span>English</span> -->
->>>>>>> 1d8900157f98b2ecc2e369f59de63504cacc4aba
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
                         <a href="javascript:void(0);" class="dropdown-item">
@@ -268,11 +265,8 @@
 
                 <li class="nav-item dropdown has-arrow main-drop">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-<<<<<<< HEAD
                         <!-- <span class="user-img"><img src="assets/img/profiles/avatar-21.jpg" alt=""> -->
-=======
                         <span class="user-img"><img src="assets/img/profiles/" alt="">
->>>>>>> 1d8900157f98b2ecc2e369f59de63504cacc4aba
                         <!-- <span class="status online"></span></span> -->
                         <span>Admin</span>
                     </a>

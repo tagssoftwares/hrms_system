@@ -36,13 +36,10 @@ Route::group(["namespace" => 'Employee'], function () {
 
 /* HolidayController */
 Route::group(["namespace" => 'Employee'], function () {
-<<<<<<< HEAD
 
     Route::get('holiday', ['as' => 'employee-management.holiday.holidays', 'uses' => 'HolidayController@index']);
-=======
    
-    Route::get('holiday', ['as' => 'employee-management.holiday.holidays', 'uses' => 'HolidayController@holidays']);
->>>>>>> 1d8900157f98b2ecc2e369f59de63504cacc4aba
+    
     Route::get('attendance-employee', ['as' => 'employee-management.attendance.employee_attendance', 'uses' => 'AttendanceempController@attendance']);
     Route::get('departments', ['as' => 'employee-management.department.department', 'uses' => 'DepartmentController@department']);
     Route::POST('department/store', ['as' => 'employee-management.department.department', 'uses' => 'DepartmentController@store']);
@@ -120,74 +117,6 @@ Route::group(["namespace" => 'Goal'], function () {
    
 });
 
-<<<<<<< HEAD
-
-// Account
-
-Route::group(["namespace" => 'Accounts'], function () {
-
-    Route::get('estimates', ['as' => 'accounts.estimates.estimates', 'uses' => 'AccountController@index']);
-    Route::get('create-estimate', ['as' => 'accounts.estimates.create-estimate', 'uses' => 'AccountController@create']);
-});
-
-Route::group(["namespace" => 'Accounts'], function () {
-
-    Route::get('invoices', ['as' => 'accounts.invoices.invoices', 'uses' => 'InvoicesController@index']);
-    Route::get('create-invoices', ['as' => 'accounts.invoices.create-invoices', 'uses' => 'InvoicesController@create']);
-});
-    
-route::group(["namespace" => 'Accounts'], function () {
-
-    route::get('payments', ['as' => 'accounts.payments.payments', 'uses' => 'PaymentsController@index']);
-});
-
-route::group(["namespace" => 'Accounts'], function () {
-
-    route::get('expenses', ['as' => 'accounts.expenses.expenses', 'uses' => 'ExpensesController@index']);
-});
-
-route::group(["namespace" => 'Accounts'], function () {
-
-    route::get('providendfund', ['as' => 'accounts.providendfund.providendfund', 'uses' => 'ProvidendfundController@index']);
-});
-
-route::group(["namespace" => 'Accounts'], function () {
-
-    route::get('taxes', ['as' => 'accounts.taxes.taxes', 'uses' => 'TaxesController@index']);
-});
-
-// payroll
-
-Route::group(["namespace" => 'Payroll'], function () {
-
-    Route::get('employee-salary', ['as' => 'payroll.employee-salary.employee-salary', 'uses' => 'EmployeesalaryController@index']);
-    Route::get('payslip', ['as' => 'payroll.payslip.payslip', 'uses' => 'PayslipController@index']);
-    Route::get('payrollitems', ['as' => 'payroll.payrollitems.payrollitems', 'uses' => 'PayrollitemsController@index']);
-    
-});
-
-// Policies
-Route::group(["namespace" => 'Policies'], function () {
-
-    Route::get('policies', ['as' => 'policies.policies', 'uses' => 'PoliciesController@index']);
-
-});
-
-// Reports
-
-Route::group(["namespace" => 'Report'], function () {
-
-    Route::get('expensereport', ['as' => 'report.expensereport.expensereport', 'uses' => 'ExpensereportController@index']);
-    Route::get('invoicereport', ['as' => 'report.invoicereport.invoicereport', 'uses' => 'InvoicereportController@index']);
-});
-
-// Administration
-
-Route::group(["namespace" => 'Administration'], function () {
-
-    Route::get('setting', ['as' => 'administration.setting', 'uses' => 'SettingController@index']);
-    Route::get('setting', ['as' => 'administration.setting', 'uses' => 'SettingController@index']);
-=======
 /* close */
 
 /* Training  */
@@ -197,7 +126,6 @@ Route::group(["namespace" => 'Training'], function () {
     
     Route::get('trainers', ['as' => 'Training.Trainers.trainers', 'uses' => 'TrainirseController@index']);
     Route::get('training-type', ['as' => 'Training.Training_Type.training_type', 'uses' => 'Training_typeController@index']);
->>>>>>> 1d8900157f98b2ecc2e369f59de63504cacc4aba
    
 });
 

@@ -16,11 +16,9 @@ class DepartmentController extends Controller
      */
     public function department()
 
-<<<<<<< HEAD
-    {  
-=======
-    {   $departments = Department::paginate(5);
->>>>>>> 1d8900157f98b2ecc2e369f59de63504cacc4aba
+    {   
+        $departments = Department::paginate(5);
+
        return view('employee-management.department.department', ['departments' => $departments]);
     }
 
@@ -39,23 +37,16 @@ class DepartmentController extends Controller
      */
     public function store(Request $request)
     {
-<<<<<<< HEAD
-        // $this->validateInput($request);
-         Department::create([
-            'name' => $request['name']
-        ]);
 
-        return redirect()->intended('department/store');
-    }
-=======
-     
+        // $this->validateInput($request);
+             
         $departments= Department::create([
             'name' => $request['department_name']
         ]);
 
         return redirect()->intended('departments');
-         }
->>>>>>> 1d8900157f98b2ecc2e369f59de63504cacc4aba
+    }
+
 
     /**
      * Display the specified resource.
