@@ -18,7 +18,7 @@
 							
 							<!-- Account Form -->
 							<form action="javascript:void(0)" id="login-form" name="login-form">
-								<!-- {!! Form::open(array('url' => '', 'class' =>'login-form')) !!} -->
+								
 								<div class="form-group">
 									<label>Email Address</label>
 									<input class="form-control" type="email" name="email" id="email">
@@ -42,7 +42,6 @@
 								<div class="account-footer">
 									<p>Don't have an account yet? <a href="register">Register</a></p>
 								</div>
-								<!-- {!! Form::close() !!} -->
 							</form>
 							<!-- /Account Form -->
 							

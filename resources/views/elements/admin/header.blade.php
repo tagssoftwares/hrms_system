@@ -50,13 +50,10 @@
                 <!-- Flag -->
                 <li class="nav-item dropdown has-arrow flag-nav">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-<<<<<<< HEAD
                         <img src="" alt="" height="20"> <span>English</span>
-=======
 
                         <img src="" alt="" height="20"> <span>English</span>
 
->>>>>>> c41c003d9557856612d2ebcce0bb73398131776c
                         <!-- <img src="assets/img/flags/us.png" alt="" height="20"> <span>English</span> -->
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
