@@ -35,7 +35,7 @@ class Goal_TypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $
     }
 
     /**
