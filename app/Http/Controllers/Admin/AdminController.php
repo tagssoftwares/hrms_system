@@ -32,7 +32,7 @@ class AdminController extends Controller
         return \View::make('users/login');
     }
 
-   	public function admin_login(LoginRequest $request)
+   	public function admin_login(Request $request)
    	{
       $input = $request->all();
 
@@ -46,24 +46,11 @@ class AdminController extends Controller
 
         // Check if admin exists in database with the credentials or not
 
-        if (auth()->guard('admin')->attempt($data, $remember)) {
-
-            $admin = admin();
-
-            $admin->last_login = Carbon::now();
-            $admin->number_of_logins = $admin->number_of_logins + 1;
-            $admin->save();
-
-            $cookie = \Cookie::make('lock', '0'); // Reset the lock screen session;
-
-            $reply = [];
-
-            if ($admin->user_type == 'A') {
-                // $url = (\Session::has('back_url_superadmin')) ? \Session::get('back_url_superadmin') : \URL::route('superadmin.dashboard.index');
-                // $reply = Reply::redirect($url, trans('messages.loginSuccess'));
-
-
-            } /*else if ($admin->type == 'admin') {
+        //if (auth()->guard('admin')->attempt($data, $remember)) {
+            if ($data) {
+                # code...
+            
+             /*else if ($admin->type == 'admin') {
 
                 $company = Company::where('id', '=', $admin->company_id)->first();
 
@@ -77,18 +64,9 @@ class AdminController extends Controller
 
                 }
             }*/
-        } else {
-            $message = (\Session::get("lock") != 1) ? trans('messages.loginInvalid') : trans('messages.wrongPassword');
-            $reply = Reply::error($message);
-        }
+        } 
 
-        $response = \Response::json($reply, 200);
-
-        if (isset($cookie)) {
-            $response->withCookie($cookie);
-        }
-
-        return $response;
+        
    		
     }
 

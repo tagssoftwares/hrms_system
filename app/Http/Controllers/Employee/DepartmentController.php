@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Employee;
 
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Department;
+
 class DepartmentController extends Controller
 {
     /**
@@ -38,15 +38,23 @@ class DepartmentController extends Controller
     public function store(Request $request)
     {
 
+<<<<<<< HEAD
         // $this->validateInput($request);
+=======
+>>>>>>> c41c003d9557856612d2ebcce0bb73398131776c
              
         $departments= Department::create([
             'name' => $request['department_name']
         ]);
 
         return redirect()->intended('departments');
+<<<<<<< HEAD
     }
 
+=======
+
+         }
+>>>>>>> c41c003d9557856612d2ebcce0bb73398131776c
 
     /**
      * Display the specified resource.

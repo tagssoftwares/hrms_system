@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Employee;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Models\Department;
+use App\Models\Designation;
+use DB;
 class DesignationController extends Controller
 {
     /**
@@ -12,9 +14,16 @@ class DesignationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function desig()
+    public function index()
     {
-       return view('employee-management.designation.designation');
+        $departments = Department::get();
+       $data = DB::table('Designation')
+            ->join('Department', 'Designation.department_id', '=','Department.id' )
+            ->select('Department.name', 'Designation.designation')
+            //->select('Department.name', 'Designation.designation', 'Employees.Age', 'Departments.Name')
+            ->get();
+            //print_r($data);die();
+       return view('employee-management.designation.designation', ['departments' => $departments,'data' => $data]);
     }
 
     /**
@@ -35,8 +44,15 @@ class DesignationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $designation= Designation::create([
+            'department_id' => $request['department'],
+            'designation' => $request['designation'],
+        ]);
+
+        return redirect()->intended('designations');
+
     }
+    
 
     /**
      * Display the specified resource.

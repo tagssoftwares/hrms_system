@@ -19,13 +19,12 @@
             
             <!-- Header Title -->
             <div class="page-title-box">
+
               
 
                 <h3>HRM System</h3>
 
-                
-
-
+            
             </div>
             <!-- /Header Title -->
             
@@ -51,7 +50,13 @@
                 <!-- Flag -->
                 <li class="nav-item dropdown has-arrow flag-nav">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+<<<<<<< HEAD
                         <img src="" alt="" height="20"> <span>English</span>
+=======
+
+                        <img src="" alt="" height="20"> <span>English</span>
+
+>>>>>>> c41c003d9557856612d2ebcce0bb73398131776c
                         <!-- <img src="assets/img/flags/us.png" alt="" height="20"> <span>English</span> -->
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
@@ -265,7 +270,13 @@
 
                 <li class="nav-item dropdown has-arrow main-drop">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+<<<<<<< HEAD
                         <!-- <span class="user-img"><img src="assets/img/profiles/avatar-21.jpg" alt=""> -->
+=======
+
+                        <!-- <span class="user-img"><img src="assets/img/profiles/avatar-21.jpg" alt=""> -->
+
+>>>>>>> c41c003d9557856612d2ebcce0bb73398131776c
                         <span class="user-img"><img src="assets/img/profiles/" alt="">
                         <!-- <span class="status online"></span></span> -->
                         <span>Admin</span>

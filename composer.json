@@ -10,11 +10,19 @@
     "require": {
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
+<<<<<<< HEAD
         "laravel/framework": "^6.2",
         "laravel/tinker": "^2.0"
         
       
 
+=======
+        "laravel/tinker": "^2.0",
+        "php-parallel-lint/php-console-color": "^0.3.0",
+        "laravel/framework": "^6.0",
+        "laravelcollective/html": "^6.0",
+        "doctrine/dbal": "^2.10"
+>>>>>>> c41c003d9557856612d2ebcce0bb73398131776c
     },
     
     "require-dev": {
