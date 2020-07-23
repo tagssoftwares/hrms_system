@@ -209,11 +209,8 @@ Sidebar -->
 							</li>
 
 							<li class="menu-title"> 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> c41c003d9557856612d2ebcce0bb73398131776c
 								<a href="settings.html"><i class="la la-cog"></i> <span>Settings</span></a>
 							</li> -->
 							<li class="menu-title"> 
@@ -262,10 +259,7 @@ Sidebar -->
 								</ul>
 							</li> -->
 							<!-- <li class="menu-title"> 
-<<<<<<< HEAD
-=======
 
->>>>>>> c41c003d9557856612d2ebcce0bb73398131776c
 								<span>UI Interface</span>
 							</li>
 							<li> 
@@ -319,18 +313,12 @@ Sidebar -->
 										<a href="javascript:void(0);"> <span>Level 1</span></a>
 									</li>
 								</ul>
-<<<<<<< HEAD
-=======
 
->>>>>>> c41c003d9557856612d2ebcce0bb73398131776c
 							</li>
 							<li> 
 								<a href="{{ url('logout') }}"><i class="la la-object-ungroup"></i> <span>Logout</span></a>
 							</li>
-<<<<<<< HEAD
-=======
 
->>>>>>> c41c003d9557856612d2ebcce0bb73398131776c
 							</li> -->
 						</ul>
 					</div>
