@@ -140,8 +140,6 @@ Route::group(["namespace" => 'Goal'], function () {
    
 });
 
-<<<<<<< HEAD
-=======
 /* close */
 
 /* Training  */
@@ -253,7 +251,6 @@ Route::group(["namespace" => 'Administration'], function () {
    
 });
 
->>>>>>> c41c003d9557856612d2ebcce0bb73398131776c
 /* close */
 
 /* Training  */
