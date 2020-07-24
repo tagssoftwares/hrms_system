@@ -5,7 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Model
+
+class Employee extends Model
 {
      use Notifiable;
 
@@ -14,25 +15,28 @@ class User extends Model
      *
      * @var array
      */
-    protected $table = 'users';
+    protected $table = 'employees';
 
     protected $fillable = [
-        'name', 'username', 'email', 'password', 'confirm_password', 'role', 'employeeID',
+        'user_id', 'employeeID', 'first_name','middel_name','last_name', 'email', 'mobile_number', 'gender', 'date_of_birth', 'joining_date','local_address','permanent_address','profile_image','status','department','designation',
     ];
+
+    /*protected $dates = [
+    'joining_date',
+	];*/
 
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    
 
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
+
      */
     protected $casts = [
         'email_verified_at' => 'datetime',

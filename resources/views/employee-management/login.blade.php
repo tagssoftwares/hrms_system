@@ -2,19 +2,19 @@
 @section('login-content')
 
 <div class="account-content">
-
+				<a href="{{ url('login-admin') }}" class="btn btn-primary admin-btn">Manager</a>
 				<a href="" class="btn btn-primary apply-btn">Apply Job</a>
 				<div class="container">
 				
 					<!-- Account Logo -->
 					<div class="account-logo">
-						<a href="index"><img src="assets/img/tag_logo.png" alt="TAgs Softwares"></a>
+						<a href="index"><img src="assets/img/tag_logo.png" alt="Tags Softwares"></a>
 					</div>
 					<!-- /Account Logo -->
 					
 					<div class="account-box">
 						<div class="account-wrapper">
-							<h3 class="account-title">Admin Login</h3>
+							<h3 class="account-title">Login</h3>
 							<p class="account-subtitle">Access to our dashboard</p>
 							
 							<!-- Account Form -->
@@ -42,7 +42,6 @@
 								</div>
 								<div class="account-footer">
 									<p>Don't have an account yet? <a href="register">Register</a></p>
-									<a href="{{ url('/') }}">Back to Employee</a>
 								</div>
 
 								<!-- {!! Form::close() !!} -->
@@ -74,7 +73,7 @@ $('#submitbutton').click(function(e){
    
    /* Submit form data using ajax*/
    $.ajax({
-      url: "{{ url('admin_login') }}",
+      url: "{{ url('employee-dashboard') }}",
       method: 'post',
       data: $('#login-form').serialize(),
       success: function(response){
@@ -84,7 +83,7 @@ $('#submitbutton').click(function(e){
             //$('#res_message').show();
             $('#res_message').html(response.msg);
             //$('#msg_div').removeClass('d-none');
-            window.location.replace(baseUrl+"/dashboard");
+            window.location.replace(baseUrl+"/emp_dashboard");
       }
       
   });

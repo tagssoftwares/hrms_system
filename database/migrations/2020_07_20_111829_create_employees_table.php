@@ -4,6 +4,9 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+use App\Models\Employee;
+use Carbon\Carbon;
+
 class CreateEmployeesTable extends Migration
 {
     /**
@@ -25,14 +28,14 @@ class CreateEmployeesTable extends Migration
             $table->string('middel_name', 100);
             $table->string('last_name', 100);
             $table->string('email', 150)->unique();
-            $table->string('mobile_number', 20);
-            $table->enum('gender',['male','female']);
-            $table->date('date_of_birth')->nullable();
-            $table->date('joining_date')->nullable();
-             $table->text('local_address');
-            $table->text('permanent_address');
+            $table->string('mobile_number', 20)->nullable();;
+            $table->enum('gender',['male','female'])->nullable();;
+            $table->string('date_of_birth')->nullable();
+            $table->string('joining_date')->nullable();
+            $table->text('local_address')->nullable();;
+            $table->text('permanent_address')->nullable();;
             $table->string('profile_image')->default('default.jpg')->nullable();
-            $table->enum('status',['active','inactive']);  
+            $table->enum('status',['active','inactive'])->nullable();;  
             $table->integer('designation')->unsigned()->nullable();
             $table->integer('department')->unsigned()->nullable();        
             $table->foreign('designation')

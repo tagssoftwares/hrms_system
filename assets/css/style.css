@@ -5388,7 +5388,21 @@ table.table-inbox tbody tr.checked {
 	box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
 	color: #fff;
 	position: absolute;
-	right: 20px;
+	right: 10px;
+	top: 20px;
+}
+
+.admin-btn{
+	background: #f43b48;
+	background: -moz-linear-gradient(left, #f43b48 0%, #453a94 100%);
+	background: -webkit-linear-gradient(left, #f43b48 0%, #453a94 100%);
+	background: -ms-linear-gradient(left, #f43b48 0%, #453a94 100%);
+	background: linear-gradient(to right, #f43b48 0%, #453a94 100%);
+	border-color: transparent;
+	box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
+	color: #fff;
+	position: absolute;
+	right: 120px;
 	top: 20px;
 }
 .job-list {

@@ -35,15 +35,18 @@ class DepartmentController extends Controller
      */
     public function store(Request $request)
     {
+        // $this->validateInput($request);
+         
 
-             
+     
         $departments= Department::create([
             'name' => $request['department_name']
         ]);
 
         return redirect()->intended('departments');
 
-         }
+    }
+
 
     /**
      * Display the specified resource.

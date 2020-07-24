@@ -22,14 +22,14 @@
                 <div class="page-header">
                     <div class="row align-items-center">
                         <div class="col">
-                            <h3 class="page-title">Employee</h3>
+                            <h3 class="page-title">User</h3>
                             <ul class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Employee</li>
+                                <li class="breadcrumb-item active">Users</li>
                             </ul>
                         </div>
                         <div class="col-auto float-right ml-auto">
-                            <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_employee"><i class="fa fa-plus"></i> Add Employee</a>
+                            <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_employee"><i class="fa fa-plus"></i> Add User</a>
                             
                         </div>
                     </div>
@@ -83,17 +83,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                  <?php $i=1;  ?>
+                                  @foreach ($employees as $employee)
                                     <tr>
-                                      <td>1</td>
+                                      <td><?php echo $i;?></td>
                                         <td>
                                             <h2 class="table-avatar">
-                                                <a href="profile" class="avatar"><img alt="" src="img/profiles/avatar-09.jpg"></a>
-                                                <a href="#">Richard Miles <span></span></a>
+                                                
+                                                <a href="#">{{ $employee->name }}<span></span></a>
                                             </h2>
                                         </td>
-                                        <td>Casual Leave</td>
-                                        <td>8 Mar 2019</td>
-                                        <td>9 Mar 2019</td>
+                                        <td>{{ $employee->employeeID }}</td>
+                                        <td>{{ $employee->email }}</td>
+                                        <td>{{ $employee->role }}</td>
                                         <td class="text-center">
                                             <div class="dropdown action-label">
                                                 <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
@@ -117,7 +119,8 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    
+                                    <?php $i++;?>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -128,42 +131,43 @@
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Add Employee</h5>
+                            <h5 class="modal-title">Add User</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                           <form class="form-horizontal" role="form" method="post" id="regForm" name="regForm" action="javascript:void(0)" enctype="multipart/form-data">
+                            {{ csrf_field() }}
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label class="col-form-label">First Name <span class="text-danger">*</span></label>
-                                            <input class="form-control" type="text">
+                                            <input class="form-control" type="text" name="first_name" id="first_name">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Middel Name</label>
-                                            <input class="form-control" type="text">
+                                            <input class="form-control" type="text" name="middel_name" id="middel_name">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Last Name</label>
-                                            <input class="form-control" type="text">
+                                            <input class="form-control" type="text" name="last_name" id="last_name">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Username <span class="text-danger">*</span></label>
-                                            <input class="form-control" type="text">
+                                            <input class="form-control" type="email" name="username" id="username">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Email <span class="text-danger">*</span></label>
-                                            <input class="form-control" type="email">
+                                            <input class="form-control" type="email" name="email" id="email">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
@@ -178,46 +182,40 @@
                                             <input type="hidden" name="roleName" id="roleName">
                                         </div>
                                     </div>
-                                    <script type="text/javascript">
-                            function roleChange(id){
-                                $('#roleId').val(id);
-                                $('#roleName').val($("#role option:selected").text());
-                                
-                            }
-                        </script>
+                                    
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Password</label>
-                                            <input class="form-control" type="password">
+                                            <input class="form-control" type="password" name="password" id="password">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Confirm Password</label>
-                                            <input class="form-control" type="password">
+                                            <input class="form-control" type="password" name="confirm_password" id="confirm_password">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">  
                                         <div class="form-group">
                                             <label class="col-form-label">Employee ID <span class="text-danger">*</span></label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" name="employeeID" id="employeeID">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">  
                                         <div class="form-group">
                                             <label class="col-form-label">Joining Date <span class="text-danger">*</span></label>
-                                            <div class="cal-icon"><input class="form-control datetimepicker" type="text"></div>
+                                            <div class="cal-icon"><input class="form-control datetimepicker" type="text" name="joining_date" id="joining_date"></div>
                                         </div>
                                     </div>
 
-  <!--                                   <div class="col-md-6">
+                                   <div class="col-md-6">
                                        
                                         <div class="form-group">
                                             <label>Department <span class="text-danger">*</span></label>
                                         <select class="select" class="js-department" name="department" id="department">
                                                 <option value="0">Select Department</option>
-                                                @foreach ($departments as $department)
-                                                <option value="{{$department->id}}">{{$department->name}}</option>
+                                                @foreach ($departments as $key => $value)
+                                                <option value="{{$value->id}}">{{$value->name}}</option>
                                                 @endforeach
                                           </select>
                                         </div>
@@ -228,68 +226,14 @@
                                             <label>Designation <span class="text-danger">*</span></label>
                                          <select class="select" class="js-designation" name="designation" id="designation">
                                                 <option value="0">Select Designation</option>
-                                                  @foreach ($designations as $designation)
-                                                  <option value="">{{$designation->designation}}</option>
-                                                @endforeach
-                                          </select>
-                                        </div>
-                                    </div> -->
-                                   
-                                    <div class="col-md-6">
-                                       
-                                        <div class="form-group">
-                                            <label>Department <span class="text-danger">*</span></label>
-                                        <select class="select form-control input-lg dynamic" data-dependent="designation" name="department" id="department">
-                                                <option value="0">Select Department</option>
-                                                @foreach ($departments as $department)
-                                                <option value="{{$department->id}}">{{$department->name}}</option>
-                                                @endforeach
-                                          </select>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Designation <span class="text-danger">*</span></label>
-                                         <select class="select form-control input-lg dynamic" name="designation" id="designation">
-                                                <option value="0">Select Designation</option>
-                                                  @foreach ($designations as $designation)
-                                                  <option value="">{{$designation->designation}}</option>
-                                                @endforeach
+                                                  
                                           </select>
                                         </div>
                                     </div>
-                                    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-
-                                    <script>
-                                      function showDesignation(id){
-                                        //filter.addEventListener('change', showdesignation);
-                                      var selectBox = document.getElementById('department');
-                                      console.log(selectBox);
-                                      var userInput = selectBox.options[selectBox.selectedIndex].value;
-                                      console.log(userInput);
-                                      if (userInput == {{$department->id}}){
-                                      document.getElementById('design').style.display = 'block';
-                                          }else{
-                                      document.getElementById('design').style.display = 'none';
-                                      }
-                                      return false;}
-                                      </script>
-                                    <!-- <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Designation <span class="text-danger">*</span></label>
-                                         <select class="select" name="designation" id="designation">
-                                                <option value="0">Select Designation</option>
-                                                
-                                                
-                                          </select>
-                                        </div>
-                                    </div> -->
-                                    
                                 </div>
                                
                                 <div class="submit-section">
-                                    <button class="btn btn-primary submit-btn">Submit</button>
+                                    <button type="submit" id="sign_up" class="btn btn-primary submit-btn">Submit</button>
                                 </div>
                             </form>
                         </div>
@@ -300,7 +244,7 @@
                 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Edit Employee</h5>
+                            <h5 class="modal-title">Edit Users</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -642,8 +586,101 @@
         </div>
         <!-- /Page Wrapper -->
  <!-- jQuery -->
- <script src="{{asset('assets/js/jquery-3.2.1.min.js')}}"></script>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+ 
+<script type="text/javascript">
 
+     function roleChange(id){
+    $('#roleId').val(id);
+    $('#roleName').val($("#role option:selected").text());
+                                
+}
+
+      $(document).ready(function() {
+        $('select[name="department"]').on('change', function() {
+            var departmentID = $(this).val();
+            if(departmentID) {
+                $.ajax({
+                    url: 'myform/ajax/'+departmentID,
+                    type: "GET",
+                    dataType: "json",
+                    success:function(data) {
+                        
+                        $('select[name="designation"]').empty();
+                        $.each(data, function(key, value) {
+                            $('select[name="designation"]').append('<option name="designation" value="'+ key +'">'+ value.designation +'</option>');
+                        });
+
+
+                    }
+                });
+            }else{
+                $('select[name="designation"]').empty();
+            }
+        });
+    });
+
+
+      var baseUrl = '{{ URL::to('/') }}';
+
+$(document).ready(function(){
+$('#sign_up').click(function(e){
+   e.preventDefault();
+   /*Ajax Request Header setup*/
+   $.ajaxSetup({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+  });
+
+   //$('#sign_up').html('');
+   
+   /* Submit form data using ajax*/
+   $.ajax({
+      url: "{{ url('user-create') }}",
+      method: 'post',
+      data: $('#regForm').serialize(),
+      success: function(response){
+              $('#sign_up').html('Submit');
+
+              if(response.status){
+              $('#res_message').html(response.msg);
+              $('#msg_div').removeClass('alert-danger');
+              $('#msg_div').addClass('alert-success');
+              $('#msg_div').show();
+              $('#res_message').show();
+              //return redirect()->intended('userlist');
+            window.location.replace(baseUrl+"userlist");
+          }else{
+              $('#res_message').html(response.msg);
+              $('#msg_div').removeClass('alert-success');
+              $('#msg_div').addClass('alert-danger');
+              $('#msg_div').show();
+              $('#res_message').show();
+          }
+         //------------------------
+            
+            // $('#res_message').show();
+            // $('#res_message').html(response.msg);
+            // $('#msg_div').removeClass('d-none');
+
+            document.getElementById("regForm").reset(); 
+            setTimeout(function(){
+            $('#res_message').hide();
+            $('#msg_div').hide();
+            },10000);
+         //--------------------------
+      }
+      // error: function(response){
+      //   $('#res_message').show();
+      //       $( '#res_message').html(response.msg);
+      //       $('#msg_div').removeClass('d-none');
+      // }
+    });
+      
+   });
+});
+ </script>
     
     <script>
      $(document).ready(function(){

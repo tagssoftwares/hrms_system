@@ -36,6 +36,8 @@ class AdminController extends Controller
    	{
       $input = $request->all();
 
+      $rules = array('email' => 'required|email', 'password' => 'required');
+
         $remember = false;
 
         $data = ['email' => $input['email'], 'password' => $input['password']];

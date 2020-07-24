@@ -68,7 +68,11 @@
 							</div>
 							<div class="modal-body">
 
+
 								
+
+								<form action="{{url('department/store')}}" method="POST">
+
 								<form action="{{ url('department/store') }}" method="POST">
 								{{ csrf_field() }}
 									<div class="form-group">
