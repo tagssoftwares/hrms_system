@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Goal;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Gollist;
+use DB;
 
 class Goal_listController extends Controller
 {
@@ -13,8 +15,11 @@ class Goal_listController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-       return view('Goals.goal_list.goal_list');
+        
+    {     $goal_type = Goaltype::get();
+         $goallist = Goallist::paginate(5);
+        
+       return view('Goals.goal_list.goal_list',['goallist'=>$goallist,'goal_type'=>$goal_type]);
     }
 
     /**
@@ -24,7 +29,7 @@ class Goal_listController extends Controller
      */
     public function create()
     {
-        //
+       
     }
 
     /**
@@ -34,8 +39,21 @@ class Goal_listController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {  
+       $goallist= Goallist::create([
+            'goals_type_id' => $request['goals_type_id'],
+            'subject' => $request['subject'],
+            'target_achievement' => $request['subject'],
+            'start_date' => $request['start_date'],
+            'end_date' => $request['end_date'],
+            'discription' => $request['discription'],
+            
+        ]);
+
+        return redirect()->intended('goal-tracking');
+
+       
+        
     }
 
     /**
@@ -46,7 +64,7 @@ class Goal_listController extends Controller
      */
     public function show($id)
     {
-        //
+       
     }
 
     /**
@@ -57,7 +75,7 @@ class Goal_listController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -69,7 +87,7 @@ class Goal_listController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**

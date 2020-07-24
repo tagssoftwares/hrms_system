@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Goal;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Models\Goaltype;
+use DB;
 class Goal_TypeController extends Controller
 {
     /**
@@ -15,7 +16,7 @@ class Goal_TypeController extends Controller
     public function index()
 
     {   $goals = Goaltype::paginate(5);
-       return view('Goals.goal_type.goal_type');
+       return view('Goals.goal_type.goal_type',['goals'=>$goals]);
     }
 
     /**
@@ -44,7 +45,18 @@ class Goal_TypeController extends Controller
 
         return redirect()->intended('goal-type');
     }
+    
 
+
+    public function changeStatus(Request $request)
+    {
+        $goals = Goaltype::find($request->id);
+        DB::table('goals_type')->where('status',1)->update(['status' => 0]);
+        $goals->status = $request->status;
+        $goals->save();
+  
+        return response()->json(['success'=>'Status change successfully.']);
+    }
     /**
      * Display the specified resource.
      *

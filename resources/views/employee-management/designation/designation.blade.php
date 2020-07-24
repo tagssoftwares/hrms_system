@@ -89,7 +89,7 @@
                                 <div class="form-group">
                                     <label>Designation Name <span class="text-danger">*</span></label>
                                     <input class="form-control" type="text" name="designation">
-                                    <input class="form-control" type="text" name="designation" id="designation">
+                                   
                                 </div>
                                 <div class="submit-section">
                                     <button class="btn btn-primary submit-btn">Submit</button>

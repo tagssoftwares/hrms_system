@@ -137,6 +137,8 @@ Route::group(["namespace" => 'Goal'], function () {
     Route::get('goal-tracking', ['as' => 'Goals.goal_list.goal_list', 'uses' => 'Goal_listController@index']);
     
     Route::get('goal-type', ['as' => 'Goals.goal_type.goal_type', 'uses' => 'Goal_TypeController@index']);
+    Route::POST('goals/store', ['as' => 'Goals.goal_type.goal_type', 'uses' => 'Goal_TypeController@store']);
+    Route::get('changeStatus', ['as' => 'Goals.goal_list.goal_list', 'uses' => 'Goal_TypeController@index']);
    
 });
 
