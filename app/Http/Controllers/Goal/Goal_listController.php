@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Goal;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Gollist;
-use DB;
 
 class Goal_listController extends Controller
 {
@@ -15,11 +13,8 @@ class Goal_listController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-        
-    {     $goal_type = Goaltype::get();
-         $goallist = Goallist::paginate(5);
-        
-       return view('Goals.goal_list.goal_list',['goallist'=>$goallist,'goal_type'=>$goal_type]);
+    {
+        return view('Goals.goal_list.goal_list');
     }
 
     /**
@@ -30,7 +25,6 @@ class Goal_listController extends Controller
     public function create()
     {
        
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -64,7 +58,7 @@ class Goal_listController extends Controller
      */
     public function show($id)
     {
-       
+        //
     }
 
     /**
@@ -75,7 +69,7 @@ class Goal_listController extends Controller
      */
     public function edit($id)
     {
-        
+        //
     }
 
     /**
@@ -87,7 +81,7 @@ class Goal_listController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        //
     }
 
     /**
