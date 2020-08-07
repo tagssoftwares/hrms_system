@@ -66,17 +66,8 @@
 									<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
-							<div class="modal-body">
-<<<<<<< HEAD
-<<<<<<< HEAD
-								<form action="{{url('department/store')}}" method="POST">
-=======
-=======
-
-								
->>>>>>> c41c003d9557856612d2ebcce0bb73398131776c
+							<div class="modal-body">							
 								<form action="{{ url('department/store') }}" method="POST">
->>>>>>> 1d8900157f98b2ecc2e369f59de63504cacc4aba
 								{{ csrf_field() }}
 									<div class="form-group">
 										<label>Department Name <span class="text-danger">*</span></label>
