@@ -77,13 +77,6 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form method="POST" action="{{url('designation/store')}}">
-                            {{ csrf_field() }}
-                                <div class="form-group">
-                                    <label>Department <span class="text-danger">*</span></label>
-                                    <select class="select" id="department" name="department">
-                                        <option class="form-control" value="0">Select Department</option>
-                                        @foreach($departments as $department)
                             
                                 <form action="{{ url('designation/store') }}" method="POST">
                                {{ csrf_field() }}
