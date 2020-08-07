@@ -10,10 +10,13 @@
             <!-- /Logo -->
             
             <a id="toggle_btn" href="javascript:void(0);">
+            <span></span>
                 <span class="bar-icon">
                     <span></span>
                     <span></span>
                     <span></span>
+                    <span></span>
+
                 </span>
             </a>
             
@@ -48,13 +51,12 @@
                 <!-- /Search -->
             
                 <!-- Flag -->
-                <li class="nav-item dropdown has-arrow flag-nav">
+                <!-- <li class="nav-item dropdown has-arrow flag-nav">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
                         <img src="" alt="" height="20"> <span>English</span>
 
-                        <img src="" alt="" height="20"> <span>English</span>
-
-                        <!-- <img src="assets/img/flags/us.png" alt="" height="20"> <span>English</span> -->
+                       
+                         <img src="assets/img/flags/us.png" alt="" height="20"> <span>English</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
                         <a href="javascript:void(0);" class="dropdown-item">
@@ -70,7 +72,7 @@
                             <img src="" alt="" height="16"> German
                         </a>
                     </div>
-                </li>
+                </li> -->
                 <!-- /Flag -->
             
                 <!-- Notifications -->
@@ -160,7 +162,7 @@
                 <!-- /Notifications -->
                 
                 <!-- Message Notifications -->
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                         <i class="fa fa-comment-o"></i> <span class="badge badge-pill"></span>
                     </a>
@@ -262,7 +264,7 @@
                             <a href="chat.html">View all Messages</a>
                         </div>
                     </div>
-                </li>
+                </li> -->
                 <!-- /Message Notifications -->
 
                 <li class="nav-item dropdown has-arrow main-drop">
@@ -271,7 +273,7 @@
 
                         <!-- <span class="user-img"><img src="assets/img/profiles/avatar-21.jpg" alt=""> -->
 
-                        <span class="user-img"><img src="assets/img/profiles/" alt="">
+                        <!-- <span class="user-img"><img src="assets/img/profiles/" alt=""> -->
                         <!-- <span class="status online"></span></span> -->
                         <span>Admin</span>
                     </a>
