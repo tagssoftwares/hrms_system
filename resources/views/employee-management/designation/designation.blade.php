@@ -63,7 +63,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            
             <!-- /Page Content -->
 
             <!-- Add Designation Modal -->
@@ -169,4 +169,5 @@
                     </div>
                 </div>
             </div>
+</div>
 @endsection
