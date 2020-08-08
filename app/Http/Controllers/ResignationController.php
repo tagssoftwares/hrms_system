@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Employee;
+use App\Models\Resignation;
 
 use Illuminate\Http\Request;
+use DB;
 
 class ResignationController extends Controller
 {
@@ -12,8 +15,16 @@ class ResignationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function reg()
-    {
-        return view('Resignation.resignation');
+    {      $employees = Employee::get();
+        $resignation = DB::table('resignation')
+             ->join('employees','resignation.employees_id','=','employees.id')
+             ->select('employees.first_name','employees.middel_name','employees.last_name','resignation.notice_date','resignation.resignation_date','resignation.reason')
+            // ->lists('name','employees')
+             ->get();
+             
+      
+        return view('Resignation.resignation',['employees'=>$employees,'resignation'=>$resignation]);
+        
     }
 
     /**
@@ -34,7 +45,15 @@ class ResignationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $resignation=Resignation::create([
+          'employees_id'=> $request['employees'],
+          'notice_date'=>$request['notice_date'],
+          'resignation_date'=> $request['resignation_date'] ,
+          'reason'=>$request['resons'],
+         
+        ]);
+        return redirect()->intended('resignation');
+
     }
 
     /**

@@ -34,7 +34,11 @@ class TerminationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $termination=Termination:: create([
+       'employees_id'=>$request
+
+
+       ]);
     }
 
     /**

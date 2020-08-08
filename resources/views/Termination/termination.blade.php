@@ -79,39 +79,33 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form method="POST" action="{{url(termination/store)}}">
                                 <div class="form-group">
                                     <label>Terminated Employee <span class="text-danger">*</span></label>
-                                    <input class="form-control" type="text">
+                                    <input class="form-control" type="text" name="terminated_employee">
                                 </div>
                                 <div class="form-group">
                                     <label>Termination Type <span class="text-danger">*</span></label>
-                                    <div class="add-group-btn">
-                                        <select class="select">
-                                            <option>Misconduct</option>
-                                            <option>Others</option>
-                                        </select>
-                                        <a class="btn btn-primary" href="javascript:void(0);"><i class="fa fa-plus"></i> Add</a>
-                                    </div>
+                                    <input type="text" class="form-control" name="termination_type">
                                 </div>
                                 <div class="form-group">
                                     <label>Termination Date <span class="text-danger">*</span></label>
                                     <div class="cal-icon">
-                                        <input type="text" class="form-control datetimepicker">
+                                        <input type="text" class="form-control datetimepicker" name="termination_date">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Reason <span class="text-danger">*</span></label>
-                                    <textarea class="form-control" rows="4"></textarea>
+                                    <textarea class="form-control" rows="4" name="reason"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label>Notice Date <span class="text-danger">*</span></label>
                                     <div class="cal-icon">
-                                        <input type="text" class="form-control datetimepicker">
+                                        <input type="text" class="form-control datetimepicker" name="notice_date">
                                     </div>
                                 </div>
                                 <div class="submit-section">
-                                    <button class="btn btn-primary submit-btn">Submit</button>
+                                    <button class="btn btn-primary submit-btn" name="submit" value="submit">Submit</button>
                                 </div>
                             </form>
                         </div>

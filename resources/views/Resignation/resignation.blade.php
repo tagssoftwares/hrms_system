@@ -28,7 +28,6 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Resigning Employee </th>
-                                        <th>Department </th>
                                         <th>Reason </th>
                                         <th>Notice Date </th>
                                         <th>Resignation Date </th>
@@ -36,18 +35,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- <tr>
-                                        <td>1</td>
-                                        <td>
-                                            <h2 class="table-avatar blue-link">
-                                                <a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-02.jpg"></a>
-                                                <a href="profile.html">John Doe</a>
-                                            </h2>
-                                        </td>
-                                        <td>Web Development</td>
-                                        <td>Lorem ipsum dollar</td>
-                                        <td>28 Feb 2019</td>
-                                        <td>28 Feb 2019</td>
+                                    <?php $i=1;?>@foreach($resignation as $regi)
+                                    <tr>
+                                    <td><?php echo $i;?></td>
+                                    <td>{{$regi->first_name}} {{$regi->middel_name}} {{$regi->last_name}}</td> 
+                                        <td>{{$regi->notice_date}}</td>
+                                        <td>{{$regi->resignation_date}}</td>
+                                        <td>{{$regi->reason}}</td>
+                                        
                                         <td class="text-right">
                                             <div class="dropdown dropdown-action">
                                                 <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
@@ -57,7 +52,9 @@
                                                 </div>
                                             </div>
                                         </td>
-                                    </tr> -->
+                                    </tr>
+                                    <?php $i++;?>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -77,29 +74,36 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form method="POST" action="{{url('employee/store')}}">
+                                {{csrf_field()}}
                                 <div class="form-group">
                                     <label>Resigning Employee <span class="text-danger">*</span></label>
-                                    <input class="form-control" type="text">
+                                    <select class="select" name="employees">
+
+                                            @foreach ($employees as $employee)
+                                            
+                                        <option value="{{$employee->id}}">{{$employee->first_name}} {{$employee->middel_name}} {{$employee->last_name}}</option>
+                                        @endforeach
+                                            </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Notice Date <span class="text-danger">*</span></label>
                                     <div class="cal-icon">
-                                        <input type="text" class="form-control datetimepicker">
+                                        <input type="text" class="form-control datetimepicker" name="notice_date">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Resignation Date <span class="text-danger">*</span></label>
                                     <div class="cal-icon">
-                                        <input type="text" class="form-control datetimepicker">
+                                        <input type="text" class="form-control datetimepicker" name="resignation_date">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Reason <span class="text-danger">*</span></label>
-                                    <textarea class="form-control" rows="4"></textarea>
+                                    <textarea class="form-control" rows="4" name="resons"></textarea>
                                 </div>
                                 <div class="submit-section">
-                                    <button class="btn btn-primary submit-btn">Submit</button>
+                                    <button class="btn btn-primary submit-btn" value="submit" name="submit">Submit</button>
                                 </div>
                             </form>
                         </div>

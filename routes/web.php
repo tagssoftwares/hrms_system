@@ -139,6 +139,7 @@ Route::group(["namespace" => 'Performance'], function () {
 Route::group(["namespace" => 'Goal'], function () {
 
     Route::get('goal-tracking', ['as' => 'Goals.goal_list.goal_list', 'uses' => 'Goal_listController@index']);
+    Route::POST('goallist/store', ['as' => 'Goals.goal_list.goal_list', 'uses' => 'Goal_listController@store']);
     
     Route::get('goal-type', ['as' => 'Goals.goal_type.goal_type', 'uses' => 'Goal_TypeController@index']);
     Route::POST('goals/store', ['as' => 'Goals.goal_type.goal_type', 'uses' => 'Goal_TypeController@store']);
@@ -275,7 +276,9 @@ Route::group(["namespace" => 'Training'], function () {
 /* close Training */
 Route::get('promotion', 'PromotionController@promotion');
 Route::get('resignation', 'ResignationController@reg');
+route::POST('employee/store','ResignationController@store');
 Route::get('termination', 'TerminationController@termination');
+Route::POST('termination/store','TerminationController@store');
 
 
 /* profile */
