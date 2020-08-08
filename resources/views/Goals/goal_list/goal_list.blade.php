@@ -97,7 +97,7 @@
                                         <div class="form-group">
                                             <label class="col-form-label">Goal Type</label>
                                             <select class="select">
-                                            @foreach ($departments as $department)
+                                            @foreach ($goals_type as $goals_type)
                                         <option value="{{$goals_type->id}}">{{$goals_type->goal_type}}</option>
                                         @endforeach
                                             </select>
