@@ -13,13 +13,11 @@ class CreateGoallistTable extends Migration
      */
     public function up()
     {
-        Schema::create('goallist', function (Blueprint $table) {
-            Schema::create('goallist', function (Blueprint $table) {
+        Schema::create('goallist', function (Blueprint $table) {     
                 $table->increments('id');
                 $table->integer('goals_type_id')->unsigned();
                 $table->foreign('goals_type_id')
-                        ->references('id')->on('goals_type')
-                        ->unasigned()->index();
+                        ->references('id')->on('goals_type');
                 $table->string('subject',100);
                 $table->string('target_acheivement',100);
                 $table->string('start_date',100);
@@ -27,8 +25,7 @@ class CreateGoallistTable extends Migration
                 $table->string('discription',100);
                 $table->timestamps();
             });
-            $table->timestamps();
-        });
+          
     }
 
     /**

@@ -1,6 +1,7 @@
 @extends('layouts.admin-layout')
 
 @section('admin-content')
+
 <div class="content container-fluid">
 				
                 <!-- Page Header -->

@@ -148,13 +148,11 @@
 
                         <!-- <span class="user-img"><img src="assets/img/profiles/avatar-21.jpg" alt=""> -->
 
-                        <span class="user-img"><img src="assets/img/profiles/" alt="">
-
                         <!-- <span class="user-img"><img src="assets/img/profiles/avatar-21.jpg" alt=""> -->
 
 
                         <!-- <span class="user-img"><img src="assets/img/profiles/avatar-21.jpg" alt=""> -->
-                        <span class="user-img"><img src="assets/img/profiles/" alt="">
+                        <!-- <span class="user-img"><img src="assets/img/profiles/" alt=""> -->
 
 
 
