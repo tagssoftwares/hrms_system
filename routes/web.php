@@ -1,3 +1,4 @@
+
 <?php
 
 /*
@@ -140,6 +141,8 @@ Route::group(["namespace" => 'Goal'], function () {
     Route::get('goal-tracking', ['as' => 'Goals.goal_list.goal_list', 'uses' => 'Goal_listController@index']);
     
     Route::get('goal-type', ['as' => 'Goals.goal_type.goal_type', 'uses' => 'Goal_TypeController@index']);
+    Route::POST('goals/store', ['as' => 'Goals.goal_type.goal_type', 'uses' => 'Goal_TypeController@store']);
+    Route::get('changeStatus', ['as' => 'Goals.goal_list.goal_list', 'uses' => 'Goal_TypeController@index']);
    
 });
 
@@ -184,7 +187,6 @@ Route::group(["namespace" => 'Goal'], function () {
     Route::get('goal-type', ['as' => 'Goals.goal_type.goal_type', 'uses' => 'Goal_TypeController@index']);
    
 });
-
 
 
 // Account
@@ -255,7 +257,6 @@ Route::group(["namespace" => 'Administration'], function () {
    
 });
 
-
 /* close */
 
 /* Training  */
@@ -265,7 +266,6 @@ Route::group(["namespace" => 'Training'], function () {
     
     Route::get('trainers', ['as' => 'Training.Trainers.trainers', 'uses' => 'TrainirseController@index']);
     Route::get('training-type', ['as' => 'Training.Training_Type.training_type', 'uses' => 'Training_typeController@index']);
-
    
 });
 

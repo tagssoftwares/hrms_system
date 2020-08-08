@@ -31,7 +31,6 @@
 		<!-- Bootstrap Core JS -->
 		<script rel="javascript" type="text/javascript" href="js/jquery-1.11.3.min.js" ></script>
 
-
         <script src="{{ asset('assets/js/popper.min.js')}}"></script>
         <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
 		

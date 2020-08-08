@@ -49,10 +49,12 @@
                                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_designation"><i class="fa fa-pencil m-r-5"></i> Edit</a>
                                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_designation"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
                                             </div>
-                                            </div>
+                                        </div>
                                         </td>
                                         
                                     </tr>
+                                  
+                                       
                                     <?php $i++;?>
                                      @endforeach
                                        
@@ -78,7 +80,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            
+                           
                                 <form action="{{ url('designation/store') }}" method="POST">
                                {{ csrf_field() }}
                                 <div class="form-group">

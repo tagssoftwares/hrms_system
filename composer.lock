@@ -4,15 +4,10 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "15edffe88bf64ca91d317f423a0a68d3",
-=======
-<<<<<<< HEAD
+
+
     "content-hash": "5ac7407dc851b5e4eb9c002f1ba28c68",
-=======
-    "content-hash": "2dbf15bc41215695a4be5ac1815d3a9c",
->>>>>>> c41c003d9557856612d2ebcce0bb73398131776c
->>>>>>> 7c4395041385845bf9f3be45a351b86c56ce4470
+
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -871,11 +866,7 @@
                 "psysh"
             ],
             "time": "2020-07-07T15:10:00+00:00"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 7c4395041385845bf9f3be45a351b86c56ce4470
+
         },
         {
             "name": "laravelcollective/html",
@@ -944,10 +935,7 @@
             "description": "HTML and Form Builders for the Laravel Framework",
             "homepage": "https://laravelcollective.com",
             "time": "2020-05-19T18:02:16+00:00"
-<<<<<<< HEAD
-=======
->>>>>>> c41c003d9557856612d2ebcce0bb73398131776c
->>>>>>> 7c4395041385845bf9f3be45a351b86c56ce4470
+
         },
         {
             "name": "league/commonmark",

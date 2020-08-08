@@ -84,7 +84,7 @@ Sidebar -->
 							</li>
 														<li class="menu-title"> 
 								<span>Pages</span>
-							</li> -->
+							</li> 
 							 <li class="submenu">
 								<a href="#"><i class="la la-user"></i> <span> Profile </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
@@ -261,7 +261,6 @@ Sidebar -->
 
 							</li>
 							<!-- <li class="menu-title"> 
->>>>>>> 7c4395041385845bf9f3be45a351b86c56ce4470
 
 								<span>UI Interface</span>
 							</li>

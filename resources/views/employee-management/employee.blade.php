@@ -144,7 +144,6 @@
                     </div>
                            
                     
-
                 <div id="add_employee" class="modal custom-modal fade" role="dialog">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">

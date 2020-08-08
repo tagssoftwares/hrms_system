@@ -44,12 +44,7 @@ class DesignationController extends Controller
         ]);
 
         return redirect()->intended('designations');
-        $designation= Designation::create([
-            'department_id' => $request['department'],
-            'designation' => $request['designation'],
-        ]);
 
-        return redirect()->intended('designations');
 
     }
     

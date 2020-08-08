@@ -14,7 +14,7 @@ class Goal_listController extends Controller
      */
     public function index()
     {
-       return view('Goals.goal_list.goal_list');
+        return view('Goals.goal_list.goal_list');
     }
 
     /**
@@ -24,8 +24,7 @@ class Goal_listController extends Controller
      */
     public function create()
     {
-        //
-    }
+       
 
     /**
      * Store a newly created resource in storage.
@@ -34,8 +33,21 @@ class Goal_listController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {  
+       $goallist= Goallist::create([
+            'goals_type_id' => $request['goals_type_id'],
+            'subject' => $request['subject'],
+            'target_achievement' => $request['subject'],
+            'start_date' => $request['start_date'],
+            'end_date' => $request['end_date'],
+            'discription' => $request['discription'],
+            
+        ]);
+
+        return redirect()->intended('goal-tracking');
+
+       
+        
     }
 
     /**

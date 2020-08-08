@@ -17,11 +17,8 @@ class DepartmentController extends Controller
     public function department()
 
 
-    
-
     {   
         $departments = Department::paginate(5);
-
 
        return view('employee-management.department.department', ['departments' => $departments]);
     }
@@ -49,14 +46,13 @@ class DepartmentController extends Controller
 
         // $this->validateInput($request);
 
+             
         $departments= Department::create([
             'name' => $request['department_name']
         ]);
 
         return redirect()->intended('departments');
-
-    }
-
+    }    
 
    
     /**
