@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\Admin\Login\LoginRequest;
 use App\Classes\Reply;
-use App\Models\Admin;
+use App\Models\Employee;
 use Illuminate\Collective\Html\FormFacade;
 use App\Http\Controllers\AdminBaseController;
 //use App\Admin;
@@ -34,6 +34,33 @@ class AdminController extends Controller
 
    	public function admin_login(Request $request)
    	{
+        print_r($_REQUEST);
+        die();
+
+        $email = $request->email;
+    $password = $request->password;
+
+    $adminLoginCheck = DB::table('users')
+                      ->where('email',$email)
+                            ->first();
+
+    if($adminLoginCheck){
+      if (Hash::check($password, $adminLoginCheck->admin_pass)) {
+        Session::put('bamaAdmin', $email);
+        Session::save();
+        return redirect()->route('adminHome');
+      }
+      else{
+        return redirect()->route('adminLogin')->withErrors('Wrong Password');
+      }
+    }
+    else{
+      return redirect()->route('adminLogin')->withErrors('Email/Password Wrong');
+    }
+
+
+
+
       $input = $request->all();
 
       $rules = array('email' => 'required|email', 'password' => 'required');
@@ -72,7 +99,7 @@ class AdminController extends Controller
    		
     }
 
-	  public function logout(Request $request ) 
+    public function logout(Request $request ) 
 	 {
     $request->session()->flush();
     Auth::logout();

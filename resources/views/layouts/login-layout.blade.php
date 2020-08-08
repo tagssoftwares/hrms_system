@@ -9,10 +9,10 @@
         <meta name="author" content="Dreamguys - Bootstrap Admin Template">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="robots" content="noindex, nofollow">
-        <title>Login - HRMS admin template</title>
+        <title>Login</title>
 		
 		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/tag_logo.png">
 		
 		<!-- Bootstrap CSS -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">

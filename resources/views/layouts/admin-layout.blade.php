@@ -23,8 +23,15 @@
 		<!-- /Main Wrapper -->
 		
 		
+
 		<script src="{{asset('assets/js/jquery-3.2.1.min.js')}}"></script>
 		<!-- Bootstrap Core JS -->
+		<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+		<!-- <script src="{{asset('assets/js/jquery-3.2.1.min.js')}}"></script> -->
+		<!-- Bootstrap Core JS -->
+		<script rel="javascript" type="text/javascript" href="js/jquery-1.11.3.min.js" ></script>
+
+
         <script src="{{ asset('assets/js/popper.min.js')}}"></script>
         <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
 		

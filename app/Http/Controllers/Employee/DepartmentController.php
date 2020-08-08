@@ -16,7 +16,13 @@ class DepartmentController extends Controller
      */
     public function department()
 
-    {   $departments = Department::paginate(5);
+
+    
+
+    {   
+        $departments = Department::paginate(5);
+
+
        return view('employee-management.department.department', ['departments' => $departments]);
     }
 
@@ -35,10 +41,14 @@ class DepartmentController extends Controller
      */
     public function store(Request $request)
     {
+
         // $this->validateInput($request);
          
 
      
+
+        // $this->validateInput($request);
+
         $departments= Department::create([
             'name' => $request['department_name']
         ]);
@@ -48,6 +58,7 @@ class DepartmentController extends Controller
     }
 
 
+   
     /**
      * Display the specified resource.
      *

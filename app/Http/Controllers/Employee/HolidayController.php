@@ -18,7 +18,7 @@ class HolidayController extends Controller
     {
         
         $holiday = DB::table('holiday')->get();
-       // print_r($holiday);die();
+    
         return view('employee-management.holiday.holidays',['holiday' => $holiday]);
     }
 

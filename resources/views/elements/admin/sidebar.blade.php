@@ -9,16 +9,14 @@ Sidebar -->
 								<span>Main</span>
 							</li>
 							<li class="submenu">
-								<a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
+								<a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span><!--  <span class="menu-arrow"></span> --></a>
+								<!-- <ul style="display: none;">
 									<li><a class="active" href="{{url('dashboard')}}">Admin Dashboard</a></li>
 									<li><a href="{{url('emp_dashboard')}}">Employee Dashboard</a></li>
-								</ul>
+								</ul> -->
 							</li>
-							<li> 
-								<a href="{{ url('dashboard') }}"><i class="la la-dashboard"></i> <span>Dashboard</span></a>
-							</li>
-							<li class="submenu">
+						
+							<!-- <li class="submenu">
 								<a href="#"><i class="la la-cube"></i> <span> Apps</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="chat.html">Chat</a></li>
@@ -36,7 +34,7 @@ Sidebar -->
 									<li><a href="inbox.html">Email</a></li>
 									<li><a href="file-manager.html">File Manager</a></li>
 								</ul>
-							</li>
+							</li> -->
 							<li class="submenu">
 								<a href="#"><i class="la la-key"></i> <span> User Management </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
@@ -210,6 +208,7 @@ Sidebar -->
 
 							<li class="menu-title"> 
 
+
 								<a href="settings.html"><i class="la la-cog"></i> <span>Settings</span></a>
 							</li>
 							<li class="menu-title"> 
@@ -256,8 +255,13 @@ Sidebar -->
 									<li><a href="privacy-policy.html"> Privacy Policy </a></li>
 									<li><a href="blank-page.html"> Blank Page </a></li>
 								</ul>
+
 							</li>
 							<li class="menu-title"> 
+
+							</li>
+							<!-- <li class="menu-title"> 
+>>>>>>> 7c4395041385845bf9f3be45a351b86c56ce4470
 
 								<span>UI Interface</span>
 							</li>
@@ -319,10 +323,13 @@ Sidebar -->
 							</li>
 
 
-							</li>
 
 							</li>
 
+							</li>
+
+
+							</li> 
 						</ul>
 					</div>
                 </div>

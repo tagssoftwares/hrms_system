@@ -33,8 +33,12 @@
                                 </thead>
                                
                                 <tbody>
-                                   <?php $i=1;?>  @foreach ($data as $data)
-                                    <tr>
+                                    <?php $i=1;  ?>
+                               @foreach ($data as $data)
+                               
+                                    <tr role="row" class="odd">
+                                        
+                                                                       
                                         <td><?php echo $i;?></td>
                                         <td>{{$data->designation}}</td>
                                         <td>{{$data->name}}</td>
@@ -47,16 +51,20 @@
                                             </div>
                                             </div>
                                         </td>
+                                        
                                     </tr>
                                     <?php $i++;?>
-                                    @endforeach
+                                     @endforeach
+                                       
+                                    
+                                    
                                 </tbody>
                                 
                             </table>
                         </div>
                     </div>
                 </div>
-            </div>
+            
             <!-- /Page Content -->
 
             <!-- Add Designation Modal -->
@@ -84,6 +92,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Designation Name <span class="text-danger">*</span></label>
+                                    
                                     <input class="form-control" type="text" name="designation" id="designation">
                                 </div>
                                 <div class="submit-section">
@@ -154,4 +163,6 @@
                     </div>
                 </div>
             </div>
+        </select>
+    </div>
 @endsection

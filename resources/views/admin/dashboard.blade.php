@@ -20,8 +20,8 @@
 								<div class="card-body">
 									<span class="dash-widget-icon"><i class="fa fa-cubes"></i></span>
 									<div class="dash-widget-info">
-										<h3></h3>
-										<span></span>
+										<h3>{{ $empCount }}</h3>
+										<span>Total Employees</span>
 									</div>
 								</div>
 							</div>
@@ -31,8 +31,8 @@
 								<div class="card-body">
 									<span class="dash-widget-icon"><i class="fa fa-usd"></i></span>
 									<div class="dash-widget-info">
-										<h3></h3>
-										<span></span>
+										<h3>500</h3>
+										<span>Total Expense</span>
 									</div>
 								</div>
 							</div>
@@ -42,7 +42,8 @@
 								<div class="card-body">
 									<span class="dash-widget-icon"><i class="fa fa-diamond"></i></span>
 									<div class="dash-widget-info">
-										<h3></h3>
+										<h3>{{ $deptCount }}</h3>
+										<span>Total Department</span>
 										<span></span>
 									</div>
 								</div>
@@ -84,7 +85,7 @@
 						</div>
 					</div>
 					 -->
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-md-12">
 							<div class="card-group m-b-30">
 								<div class="card">
@@ -159,7 +160,7 @@
 									</div>
 								</div>
 							</div>
-						</div>	
+						</div>	 -->
 					</div>
 					
 					<!-- Statistics Widget -->

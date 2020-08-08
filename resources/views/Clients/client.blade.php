@@ -14,10 +14,10 @@
                         </div>
                         <div class="col-auto float-right ml-auto">
                             <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_client"><i class="fa fa-plus"></i> Add Client</a>
-                            <div class="view-icons">
+                            <!-- <div class="view-icons">
                                 <a href="clients.html" class="grid-view btn btn-link active"><i class="fa fa-th"></i></a>
                                 <a href="clients-list.html" class="list-view btn btn-link"><i class="fa fa-bars"></i></a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -52,162 +52,59 @@
                     </div>     
                 </div>
                 <!-- Search Filter -->
-                
-                <div class="row staff-grid-row">
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="client-profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-19.jpg"></a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_client"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_client"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                            </div>
-                            </div>
-                            <h4 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">Global Technologies</a></h4>
-                            <h5 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">Barry Cuda</a></h5>
-                            <div class="small text-muted">CEO</div>
-                            <a href="chat.html" class="btn btn-white btn-sm m-t-10">Message</a>
-                            <a href="client-profile.html" class="btn btn-white btn-sm m-t-10">View Profile</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="client-profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-29.jpg"></a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_client"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_client"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                            </div>
-                            </div>
-                            <h4 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">Delta Infotech</a></h4>
-                            <h5 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">Tressa Wexler</a></h5>
-                            <div class="small text-muted">Manager</div>
-                            <a href="chat.html" class="btn btn-white btn-sm m-t-10">Message</a>
-                            <a href="client-profile.html" class="btn btn-white btn-sm m-t-10">View Profile</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="client-profile.html" class="avatar"><img src="assets/img/profiles/avatar-07.jpg" alt=""></a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_client"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_client"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                            </div>
-                            </div>
-                            <h4 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">Cream Inc</a></h4>
-                            <h5 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">Ruby Bartlett</a></h5>
-                            <div class="small text-muted">CEO</div>
-                            <a href="chat.html" class="btn btn-white btn-sm m-t-10">Message</a>
-                            <a href="client-profile.html" class="btn btn-white btn-sm m-t-10">View Profile</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="client-profile.html" class="avatar"><img src="assets/img/profiles/avatar-06.jpg" alt=""></a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_client"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_client"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                            </div>
-                            </div>
-                            <h4 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">Wellware Company</a></h4>
-                            <h5 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">Misty Tison</a></h5>
-                            <div class="small text-muted">CEO</div>
-                            <a href="chat.html" class="btn btn-white btn-sm m-t-10">Message</a>
-                            <a href="client-profile.html" class="btn btn-white btn-sm m-t-10">View Profile</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="client-profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-14.jpg"></a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_client"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_client"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                            </div>
-                            </div>
-                            <h4 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">Mustang Technologies</a></h4>
-                            <h5 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">Daniel Deacon</a></h5>
-                            <div class="small text-muted">CEO</div>
-                            <a href="chat.html" class="btn btn-white btn-sm m-t-10">Message</a>
-                            <a href="client-profile.html" class="btn btn-white btn-sm m-t-10">View Profile</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="client-profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-18.jpg"></a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_client"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_client"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                            </div>
-                            </div>
-                            <h4 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">International Software Inc</a></h4>
-                            <h5 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">Walter Weaver</a></h5>
-                            <div class="small text-muted">CEO</div>
-                            <a href="chat.html" class="btn btn-white btn-sm m-t-10">Message</a>
-                            <a href="client-profile.html" class="btn btn-white btn-sm m-t-10">View Profile</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="client-profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-28.jpg"></a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_client"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_client"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                            </div>
-                            </div>
-                            <h4 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">Mercury Software Inc</a></h4>
-                            <h5 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">Amanda Warren</a></h5>
-                            <div class="small text-muted">CEO</div>
-                            <a href="chat.html" class="btn btn-white btn-sm m-t-10">Message</a>
-                            <a href="client-profile.html" class="btn btn-white btn-sm m-t-10">View Profile</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="client-profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-13.jpg"></a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_client"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_client"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                            </div>
-                            </div>
-                            <h4 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">Carlson Tech</a></h4>
-                            <h5 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">Betty Carlson</a></h5>
-                            <div class="small text-muted">CEO</div>
-                            <a href="chat.html" class="btn btn-white btn-sm m-t-10">Message</a>
-                            <a href="client-profile.html" class="btn btn-white btn-sm m-t-10">View Profile</a>
+               
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>Sr</th>
+                                        <th>Client ID</th>
+                                        <th>Contact Person</th>
+                                        
+                                        <th>Email</th>
+                                        <th>Mobile</th>
+                                        <th>Status</th>
+                                        <th class="text-right">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($clients as $client)
+                                    <tr>
+                                        <td>{{ $client->id }}</td>
+                                        <td>{{ $client->clientID }}</td>
+                                        <td>{{ $client->first_name }}</td>
+                                        <td>{{ $client->email}}</td>
+                                        <td>{{ $client->phone_number }}</td>
+                                        <td>
+                                            <div class="dropdown action-label">
+                                                <a href="#" class="btn btn-white btn-sm btn-rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-dot-circle-o text-success"></i> Active </a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">
+                                            <div class="dropdown dropdown-action">
+                                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_client"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_client"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                 
+                                    
+                                    @endforeach
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
-            </div>
+                  
             <!-- /Page Content -->
         
             <!-- Add Client Modal -->
@@ -221,203 +118,65 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form action="{{url('clients/store')}}" method="POST">
+                            {{ csrf_field() }}
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="col-form-label">First Name <span class="text-danger">*</span></label>
-                                            <input class="form-control" type="text">
+                                            <input class="form-control" type="text" name="first_name">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Last Name</label>
-                                            <input class="form-control" type="text">
+                                            <input class="form-control" type="text" name="last_name">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Username <span class="text-danger">*</span></label>
-                                            <input class="form-control" type="text">
+                                            <input class="form-control" type="text" name="Username">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Email <span class="text-danger">*</span></label>
-                                            <input class="form-control floating" type="email">
+                                            <input class="form-control floating" type="email" name="email">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Password</label>
-                                            <input class="form-control" type="password">
+                                            <input class="form-control" type="password" name="password">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Confirm Password</label>
-                                            <input class="form-control" type="password">
+                                            <input class="form-control" type="password" name="confirm_password">
                                         </div>
                                     </div>
                                     <div class="col-md-6">  
                                         <div class="form-group">
                                             <label class="col-form-label">Client ID <span class="text-danger">*</span></label>
-                                            <input class="form-control floating" type="text">
+                                            <input class="form-control floating" type="text" name="clientID">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Phone </label>
-                                            <input class="form-control" type="text">
+                                            <input class="form-control" type="text" name="phone_number">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Company Name</label>
-                                            <input class="form-control" type="text">
+                                            <input class="form-control" type="text" name="company_name">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="table-responsive m-t-15">
-                                    <table class="table table-striped custom-table">
-                                        <thead>
-                                            <tr>
-                                                <th>Module Permission</th>
-                                                <th class="text-center">Read</th>
-                                                <th class="text-center">Write</th>
-                                                <th class="text-center">Create</th>
-                                                <th class="text-center">Delete</th>
-                                                <th class="text-center">Import</th>
-                                                <th class="text-center">Export</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Projects</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tasks</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Chat</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Estimates</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Invoices</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Timing Sheets</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                            </tr>
+                               
                                         </tbody>
                                     </table>
                                 </div>

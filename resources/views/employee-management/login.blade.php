@@ -16,13 +16,41 @@
 						<div class="account-wrapper">
 							<h3 class="account-title">Login</h3>
 							<p class="account-subtitle">Access to our dashboard</p>
-							
+							@if(Session::has('flash_message_error'))
+			                <div class="alert alert-sm alert-danger" role="alert">
+			                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			                        <span aria-hidden="true">&times;</span>
+			                    </button>
+			                    <strong>{!!session('flash_message_error')  !!}</strong>
+			                </div>
+			                @endif
+
+			                @if(Session::has('flash_message_success'))
+			                <div class="alert alert-sm alert-success alert-block" role="alert">
+			                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			                        <span aria-hidden="true">&times;</span>
+			                    </button>
+			                    <strong>{!! session('flash_message_success') !!}</strong>
+			                </div>
+			                @endif
 							<!-- Account Form -->
 							<form action="javascript:void(0)" id="login-form" name="login-form">
 								<!-- {!! Form::open(array('url' => '', 'class' =>'login-form')) !!} -->
+								<!-- @if ($errors->any())
+							    <div class="alert alert-danger">
+							        <ul>
+							            @foreach ($errors->all() as $error)
+							                <li>{{ $error }}</li>
+							            @endforeach
+							        </ul>
+							    </div>
+								@endif -->
+
+		
 								<div class="form-group">
-									<label>Email Address</label>
+									<label>Email</label>
 									<input class="form-control" type="email" name="email" id="email">
+									
 								</div>
 								<div class="form-group">
 									<div class="row">
@@ -36,6 +64,7 @@
 										</div>
 									</div>
 									<input class="form-control" type="password" name="password" id="password">
+									
 								</div>
 								<div class="form-group text-center">
 									<button class="btn btn-primary account-btn" type="submit" id="submitbutton" name="submitbutton">Login</button>
@@ -78,12 +107,23 @@ $('#submitbutton').click(function(e){
       data: $('#login-form').serialize(),
       success: function(response){
          //------------------------
-         
-            $('#submitbutton').html('Submit');
+         	
+            /*$('#submitbutton').html('Submit');
             //$('#res_message').show();
-            $('#res_message').html(response.msg);
+            $('#res_message').html(response.msg);*/
             //$('#msg_div').removeClass('d-none');
-            window.location.replace(baseUrl+"/emp_dashboard");
+
+            if(response == 1)
+            {
+            	window.location.replace(baseUrl+"/emp_dashboard/");
+            }
+            else
+            {
+            	alert(response);
+            	//window.location.replace(baseUrl+"/");
+            }
+
+            //
       }
       
   });

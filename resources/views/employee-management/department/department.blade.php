@@ -27,15 +27,16 @@
 							      
 									<thead>
 										<tr>
-											<th style="width: 30px;">#</th>
+											<th style="width: 30px;">Sr.No</th>
 											<th>Department Name</th>
 											<th class="text-right">Action</th>
 										</tr>
 									</thead>
 									<tbody>
+										<?php $i=1;  ?>
 									@foreach($departments as $department)
 										<tr>
-											<td> {{ $department->id }}</td>
+											<td> <?php echo $i;?></td>
 											<td> {{ $department->name }}</td>
 											<td class="text-right">
                                             <div class="dropdown dropdown-action">
@@ -47,6 +48,7 @@
 												</div>
 											</td>
 										</tr>
+										<?php $i++;?>
 										@endforeach
 									</tbody>
 								</table>
@@ -68,10 +70,10 @@
 							</div>
 							<div class="modal-body">
 
-
 								
 
-								<form action="{{url('department/store')}}" method="POST">
+								
+								
 
 								<form action="{{ url('department/store') }}" method="POST">
 								{{ csrf_field() }}

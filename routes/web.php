@@ -39,11 +39,9 @@ Route::post('create_role', 'Admin\RoleController@create_role');
 
 
 
-//Route::get('/', 'UserController@dashboard')->name('dashboard');
+Route::get('clients', ['as' => 'employee-management.Client.client', 'uses' => 'ClientController@index']);
+Route::POST('clients/store', ['as' => 'employee-management.Client.client', 'uses' => 'ClientController@store']);
 
-
-//Route::get('/login', 'UserController@login')->name('login');
-Route::get('clients', ['as' => 'employee-management.Client.client', 'uses' => 'ClientController@client']);
 
 
 /* EmployeeController */
@@ -67,6 +65,8 @@ Route::group(["namespace" => 'Employee'], function () {
     Route::get('attendance-employee', ['as' => 'employee-management.attendance.employee_attendance', 'uses' => 'AttendanceempController@attendance']);
     Route::get('departments', ['as' => 'employee-management.department.department', 'uses' => 'DepartmentController@department']);
     Route::POST('department/store', ['as' => 'employee-management.department.department', 'uses' => 'DepartmentController@store']);
+    Route::POST('designation/store', ['as' => 'employee-management.designation.designation', 'uses' => 'DesignationController@store']);
+    Route::get('designations', ['as' => 'employee-management.designation.designation', 'uses' => 'DesignationController@index']);
     Route::get('designations', ['as' => 'employee-management.designation.designation', 'uses' => 'DesignationController@index']);
     Route::POST('designation/store', ['as' => 'employee-management.designation.designation', 'uses' => 'DesignationController@store']);
     Route::get('timesheet', ['as' => 'employee-management.timesheet.timesheet', 'uses' => 'TimesheetController@timeshet']);

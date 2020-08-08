@@ -7,10 +7,10 @@
         <meta name="author" content="Dreamguys - Bootstrap Admin Template">
         <meta name="robots" content="noindex, nofollow">
         
-        <title>Dashboard - HRMS admin template</title>
+        <title>Dashboard</title>
 		
 		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="{{asset ('assets/img/favicon.') }}">
+        <link rel="shortcut icon" type="image/x-icon" href="{{asset ('assets/img/tag_logo.png.') }}">
 		
 		<!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{{asset ('assets/css/bootstrap.min.css') }}">

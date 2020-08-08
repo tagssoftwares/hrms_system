@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Employee;
+use App\Models\Department;
 
 class DashboardController extends Controller
 {
@@ -14,7 +16,9 @@ class DashboardController extends Controller
      */
     public function admin_dashboard()
     {
-        return view('admin.dashboard');
+        $empCount = Employee::count();
+        $deptCount = Department::count();
+        return view('admin.dashboard', compact('empCount','deptCount'));
     }
 
     /**

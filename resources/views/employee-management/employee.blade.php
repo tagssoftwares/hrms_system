@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 <!-- Search Filter -->
-<<<<<<< HEAD
+
                 <div class="row">
                     <div class="col-md-12">
                         <div class="table-responsive">
@@ -125,7 +125,7 @@
                     </div>
                 </div>
                 
-=======
+
                 
                 <div class="row staff-grid-row">
                     <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
@@ -144,7 +144,7 @@
                     </div>
                            
                     
->>>>>>> 1d8900157f98b2ecc2e369f59de63504cacc4aba
+
                 <div id="add_employee" class="modal custom-modal fade" role="dialog">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">

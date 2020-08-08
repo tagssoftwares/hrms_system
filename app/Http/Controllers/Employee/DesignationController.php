@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\Employee;
-
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Department;
 use App\Models\Designation;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use DB;
 class DesignationController extends Controller
 {
@@ -15,15 +14,13 @@ class DesignationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $departments = Department::get();
+
+    {  $departments = Department::get();
        $data = DB::table('Designation')
-            ->join('Department', 'Designation.department_id', '=','Department.id' )
-            ->select('Department.name', 'Designation.designation')
-            //->select('Department.name', 'Designation.designation', 'Employees.Age', 'Departments.Name')
-            ->get();
-            //print_r($data);die();
-       return view('employee-management.designation.designation', ['departments' => $departments,'data' => $data]);
+             ->join('Department','Designation.department_id','=','Department.id')
+             ->select('Department.name','Designation.designation')
+             ->get();
+       return view('employee-management.designation.designation', ['departments' => $departments,'data' =>$data]);
     }
 
     /**
@@ -31,10 +28,7 @@ class DesignationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -44,6 +38,12 @@ class DesignationController extends Controller
      */
     public function store(Request $request)
     {
+        Designation::create([
+            'department_id' => $request['department'],
+            'designation' => $request['designation']
+        ]);
+
+        return redirect()->intended('designations');
         $designation= Designation::create([
             'department_id' => $request['department'],
             'designation' => $request['designation'],
@@ -55,6 +55,7 @@ class DesignationController extends Controller
     
 
     /**
+   
      * Display the specified resource.
      *
      * @param  int  $id

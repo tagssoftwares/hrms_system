@@ -48,6 +48,8 @@ class CreateEmployeesTable extends Migration
                   ->onDelete('cascade');            
             $table->timestamps();
         });
+
+       
     }
 
     /**
