@@ -238,7 +238,9 @@ Route::group(["namespace" => 'Payroll'], function () {
 Route::group(["namespace" => 'Policies'], function () {
 
     Route::get('policies', ['as' => 'policies.policies', 'uses' => 'PoliciesController@index']);
-
+    Route::post('policies/store', ['as' => 'policies.policies', 'uses' => 'PoliciesController@store']);
+    // Route::POST('blog_submit', ['as' => 'policies.policies', 'uses' => 'PoliciesController@blog_submit']);
+    
 });
 
 // Reports
