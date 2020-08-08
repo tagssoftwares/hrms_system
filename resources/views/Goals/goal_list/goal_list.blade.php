@@ -33,24 +33,24 @@
                                         <th>Start Date</th>
                                         <th>End Date</th>
                                         <th>Description </th>
-                                        <th>Status </th>
-                                        <th>Progress </th>
+                                        <!-- <th>Status </th>
+                                        <th>Progress </th> -->
                                         <th class="text-right">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                <?php $i=1;?>@foreach ($goallist as $goallist)
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td><?php echo $i;?></td>
+                                        <td>{{$goallist->goal_type}}</td>
+                                        <td>{{$goallist->subject}}</td>
+                                        <td>{{$goallist->target_acheivement}}</td>
+                                        <td>{{$goallist->start_date}}</td>
+                                        <td>{{$goallist->end_date}}</td>
+                                        <td>{{$goallist->discription}}</td>
+                                        
                                         <td>
-                                           
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <div class="dropdown action-label">
+                                            <!-- <div class="dropdown action-label">
                                                 <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                                                     <i class="fa fa-dot-circle-o text-success"></i> Active
                                                 </a>
@@ -58,9 +58,9 @@
                                                     <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a>
                                                     <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </td>
-                                        <td><p class="mb-1">Completed 73%</p><div class="progress" style="height:5px"><div class="progress-bar bg-primary progress-sm" style="width: 73%;height:10px;"></div></div></td>
+                                        
                                         
                                         <td class="text-right">
                                             <div class="dropdown dropdown-action">
@@ -72,6 +72,8 @@
                                             </div>
                                         </td>
                                     </tr>
+                                    <?php $i++;?>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -91,13 +93,14 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form method="POST" action="{{ url('goallist/store') }}">
+                            {{ csrf_field() }}
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="form-group">
                                             <label class="col-form-label">Goal Type</label>
-                                            <select class="select">
-                                            @foreach ($departments as $department)
+                                            <select class="select" name="goals_type">
+                                            @foreach ($goal_type as $goals_type)
                                         <option value="{{$goals_type->id}}">{{$goals_type->goal_type}}</option>
                                         @endforeach
                                             </select>
@@ -112,7 +115,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Target Achievement</label>
-                                            <input class="form-control" type="text" name="target_achievement">
+                                            <input class="form-control" type="text" name="target_acheivement">
                                         </div>
                                     </div>
                                     
@@ -138,7 +141,7 @@
                                    
                                 </div>
                                 <div class="submit-section">
-                                    <button class="btn btn-primary submit-btn">Submit</button>
+                                    <button class="btn btn-primary submit-btn" value="submit" name="submit">Submit</button>
                                 </div>
                             </form>
                         </div>
