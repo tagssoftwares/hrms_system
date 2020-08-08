@@ -77,7 +77,8 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form method="POST" action="{{url('resignation/store')}}">
+                            {{ csrf_field() }}
                                 <div class="form-group">
                                     <label>Resigning Employee <span class="text-danger">*</span></label>
                                     <input class="form-control" type="text">

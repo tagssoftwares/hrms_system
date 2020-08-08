@@ -231,7 +231,9 @@ Route::group(["namespace" => 'Payroll'], function () {
 Route::group(["namespace" => 'Policies'], function () {
 
     Route::get('policies', ['as' => 'policies.policies', 'uses' => 'PoliciesController@index']);
-
+    Route::post('policies/store', ['as' => 'policies.policies', 'uses' => 'PoliciesController@store']);
+    // Route::POST('blog_submit', ['as' => 'policies.policies', 'uses' => 'PoliciesController@blog_submit']);
+    
 });
 
 // Reports
@@ -271,6 +273,11 @@ Route::get('promotion', 'PromotionController@promotion');
 Route::get('resignation', 'ResignationController@reg');
 Route::get('termination', 'TerminationController@termination');
 
+Route::group(["namespace" => 'Profile'], function () {
+
+Route::POST('resignation/store', ['as' => 'Resignation.resignation', 'uses' => 'ResignationController@store']);
+
+});
 
 /* profile */
 

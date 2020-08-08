@@ -13,7 +13,7 @@ class ResignationController extends Controller
      */
     public function reg()
     {
-        return view('Resignation.resignation');
+        
     }
 
     /**

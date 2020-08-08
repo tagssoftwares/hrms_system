@@ -71,33 +71,33 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form action="{{ url('policies/store') }}" method="post" enctype="multiple/form-data">
+                              {{ csrf_field() }}
                                 <div class="form-group">
                                     <label>Policy Name <span class="text-danger">*</span></label>
-                                    <input class="form-control" type="text">
+                                    <input class="form-control" type="text" name="policy_name">
                                 </div>
                                 <div class="form-group">
                                     <label>Description <span class="text-danger">*</span></label>
-                                    <textarea class="form-control" rows="4"></textarea>
+                                    <textarea class="form-control" rows="4" name="description"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-form-label">Department</label>
-                                    <select class="select">
-                                        <option>All Departments</option>
-                                        <option>Web Development</option>
-                                        <option>Marketing</option>
-                                        <option>IT Management</option>
+                                    <label class="col-form-label" name="department">Department</label>
+                                    <select class="select" name="department">
+                                    @foreach ($departments as $department)
+                                    <option value="{{$department->id}}">{{$department->name}}</option>
+                                    @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Upload Policy <span class="text-danger">*</span></label>
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="policy_upload">
+                                        <input type="file" class="custom-file-input"  id="file-5" name="upload_policy">
                                         <label class="custom-file-label" for="policy_upload">Choose file</label>
                                     </div>
                                 </div>
                                 <div class="submit-section">
-                                    <button class="btn btn-primary submit-btn">Submit</button>
+                                    <button class="btn btn-primary submit-btn" name="submit" value="submit">Submit</button>
                                 </div>
                             </form>
                         </div>
