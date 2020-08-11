@@ -54,10 +54,9 @@
                         <div class="form-group form-focus select-focus">
                             <select class="select floating" > 
                                 <option >Select Role</option>
-                                <option value="Web Developer">Web Developer</option>
-                                <option value="Web Designer">Web Designer</option>
-                                <option value="Android Developer">Android Developer</option>
-                                <option value="Ios Developer">Ios Developer</option>
+                                 @foreach ($rolename as $role)
+                                <option value="{{$role->name}}">{{$role->name}}</option>
+                                @endforeach
                             </select>
                             
                         </div>

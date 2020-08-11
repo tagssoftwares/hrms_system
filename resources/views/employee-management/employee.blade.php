@@ -28,10 +28,10 @@
                                 <li class="breadcrumb-item active">Employee</li>
                             </ul>
                         </div>
-                        <div class="col-auto float-right ml-auto">
+                        <!-- <div class="col-auto float-right ml-auto">
                             <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_employee"><i class="fa fa-plus"></i> Add Employee</a>
                             
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- /Page Header -->
@@ -54,10 +54,9 @@
                         <div class="form-group form-focus select-focus">
                             <select class="select floating" > 
                                 <option >Select Role</option>
-                                <option value="Web Developer">Web Developer</option>
-                                <option value="Web Designer">Web Designer</option>
-                                <option value="Android Developer">Android Developer</option>
-                                <option value="Ios Developer">Ios Developer</option>
+                                 @foreach ($rolename as $role)
+                                <option value="{{$role->name}}">{{$role->name}}</option>
+                                @endforeach
                             </select>
                             
                         </div>
@@ -84,17 +83,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php $i=1;  ?>
+                                  @foreach ($employees as $employee)
                                     <tr>
-                                      <td>1</td>
+                                      <td><?php echo $i;?></td>
                                         <td>
                                             <h2 class="table-avatar">
-                                                <a href="profile" class="avatar"><img alt="" src="img/profiles/avatar-09.jpg"></a>
-                                                <a href="#">Richard Miles <span></span></a>
+                                                <!-- <a href="profile" class="avatar"><img alt="" src="img/profiles/avatar-09.jpg"></a> -->
+                                                <a href="#">{{ $employee->name }} <span></span></a>
                                             </h2>
                                         </td>
-                                        <td>Casual Leave</td>
-                                        <td>8 Mar 2019</td>
-                                        <td>9 Mar 2019</td>
+                                        <td>{{ $employee->employeeID }}</td>
+                                        <td>{{ $employee->email }}</td>
+                                        <td>{{ $employee->role }}</td>
                                         <td class="text-center">
                                             <div class="dropdown action-label">
                                                 <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
@@ -112,13 +113,14 @@
                                             <div class="dropdown dropdown-action">
                                                 <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                                 <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_leave"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#" id="{{ $employee->id }}" data-toggle="modal" data-target="#edit_employee"><i class="fa fa-pencil m-r-5"></i> Edit</a>
                                                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_approve"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
                                                 </div>
                                             </div>
                                         </td>
                                     </tr>
-                                    
+                                    <?php $i++;?>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
