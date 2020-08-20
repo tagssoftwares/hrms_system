@@ -65,6 +65,14 @@ Sidebar -->
 									<li><a href="{{url('overtime')}}">Overtime</a></li>
 								</ul>
 							</li>
+							<li class="submenu">
+								<a href="#"><i class="la la-rocket"></i> <span> Daily Reports</span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="{{url('marketing_report')}}">Marketing Dept</a></li>
+									<!-- <li><a href="{{url('tasks')}}">Tasks</a></li>
+									<li><a href="{{url('task-board')}}">Task Board</a></li> -->
+								</ul>
+							</li>
 							<li> 
 								<a href="{{url('clients')}}"><i class="la la-users"></i> <span>Clients</span></a>
 							</li>
@@ -88,7 +96,7 @@ Sidebar -->
 							 <li class="submenu">
 								<a href="#"><i class="la la-user"></i> <span> Profile </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="profile.html"> Employee Profile </a></li>
+									<li><a href="{{ url('/employee_edit_profile') }}"> Employee Profile </a></li>
 									<li><a href="client-profile.html"> Client Profile </a></li>
 								</ul>
 							</li>

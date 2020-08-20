@@ -48,8 +48,8 @@
 
 		
 								<div class="form-group">
-									<label>Email</label>
-									<input class="form-control" type="email" name="email" id="email">
+									<label>Employee ID</label>
+									<input class="form-control" type="text" name="employeeID" id="employeeID">
 									
 								</div>
 								<div class="form-group">

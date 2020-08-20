@@ -16,7 +16,7 @@
   <!-- Page Wrapper -->
 
             <!-- Page Content -->
-            <div class="content container-fluid">
+            <div class="content container-fluid" id="msg">
             
                 <!-- Page Header -->
                 <div class="page-header">
@@ -90,7 +90,8 @@
                                         <td>
                                             <h2 class="table-avatar">
                                                 <!-- <a href="profile" class="avatar"><img alt="" src="img/profiles/avatar-09.jpg"></a> -->
-                                                <a href="#">{{ $employee->name }} <span></span></a>
+                                                <a href="{{ url('/employee_edit_profile',['id' => $employee->id ]) }}">{{ $employee->name }} <span></span></a>
+                                                
                                             </h2>
                                         </td>
                                         <td>{{ $employee->employeeID }}</td>
@@ -113,11 +114,21 @@
                                             <div class="dropdown dropdown-action">
                                                 <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                                 <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="#" id="{{ $employee->id }}" data-toggle="modal" data-target="#edit_employee"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_approve"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                    <a class="dropdown-item" href="{{ url('/employee/edit',['id' => $employee->id ]) }}" data-id="{{ $employee->id }}" data-toggle="modal" data-target="#edit_employee_{{$employee->id}}"><i class="fa fa-pencil m-r-5" style="color:green"></i> Edit</a>
+
+                                                    <a class="dropdown-item" href="{{ url('/employee_edit_profile',['id' => $employee->id ]) }}" class="empProfile" id="edit_employeeprofile_"><i class="fa fa-eye" style="color:blue"></i> &nbsp;View</a>
+
+                                                    <a class="dropdown-item" href="{{ url('/employee_delete',['id' => $employee->id ]) }}" data-toggle="modal"  data-target="#delete_employee_{{$employee->id}}"><i class="fa fa-trash-o m-r-5" style="color:red"></i> Delete</a>
                                                 </div>
                                             </div>
                                         </td>
+                                       <!-- <td>
+                    <a href="{{ url('/employee_edit',['id' => $employee->id ]) }}" data-toggle="modal" data-target="#edit_employee_{{ $employee->id }}"><button type="button" data-id="{{ $employee->id }}" class="btn btn-warning  btn-sm"  value=""><i class="fa fa-pencil m-r-5"></i>Edit</button></a>
+                    &nbsp; | &nbsp;
+                    <a href="{{ url('/employee_edit',['id' => $employee->id ]) }}" data-toggle="modal" data-target="#edit_employee_{{ $employee->id }}"><button type="button" data-id="{{ $employee->id }}" class="btn btn-warning  btn-sm"  value=""><i class="fa fa-pencil m-r-5"></i>Edit</button></a>
+                    &nbsp; | &nbsp;
+                    <button type="button" id="" class="btn btn-danger btn-sm" data-toggle="modal" value="" data-target="#delete"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                    </td> -->
                                     </tr>
                                     <?php $i++;?>
                                     @endforeach
@@ -130,7 +141,7 @@
 
                 
                 <div class="row staff-grid-row">
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
+                    <!-- <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
                         <div class="profile-widget">
                           
                             <div class="dropdown profile-action">
@@ -140,10 +151,9 @@
                                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
                                 </div>
                             </div>
-                            <h4 class="user-name m-t-10 mb-0 text-ellipsis"><a href="profile">Priyanka Gondhule</a></h4>
-                            <div class="small text-muted">Web Designer</div>
+                            
                         </div>
-                    </div>
+                    </div> -->
                            
                     
                 <div id="add_employee" class="modal custom-modal fade" role="dialog">
@@ -468,7 +478,8 @@
                     </div>
                 </div>
             </div>
-            <div id="edit_employee" class="modal custom-modal fade" role="dialog">
+            @foreach($employees as $employee)
+            <div id="edit_employee_{{ $employee->id }}" class="modal custom-modal fade" role="dialog">
                 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -477,49 +488,52 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
+                        
                         <div class="modal-body">
-                            <form>
+                            
+                            <form class="form" method="POST" action="{{ url('/employee/update',['id' => $employee->id ]) }}">
+                                {{ csrf_field() }}
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label class="col-form-label">First Name <span class="text-danger">*</span></label>
-                                            <input class="form-control" value="John" type="text">
+                                            <input class="form-control" id="first_name" name="first_name" value="{{ $employee->first_name }}" type="text">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Last Name</label>
-                                            <input class="form-control" value="Doe" type="text">
+                                            <input class="form-control" id="last_name" name="last_name" value="{{ $employee->last_name }}" type="text">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Username <span class="text-danger">*</span></label>
-                                            <input class="form-control" value="johndoe" type="text">
+                                            <input class="form-control" id="username" name="" value="{{ $employee->email }}" type="email" readonly class="form-control floating">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Email <span class="text-danger">*</span></label>
-                                            <input class="form-control" value="johndoe@example.com" type="email">
+                                            <input class="form-control" id="email" name="" value="{{ $employee->email }}" type="email" readonly class="form-control floating">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Password</label>
-                                            <input class="form-control" value="johndoe" type="password">
+                                            <input class="form-control" id="password" name="password" value="{{ $employee->password }}" type="password" readonly class="form-control floating">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Confirm Password</label>
-                                            <input class="form-control" value="johndoe" type="password">
+                                            <input class="form-control" name="confirm_password" id="confirm_password" value="{{ $employee->confirm_password }}" type="password" readonly class="form-control floating">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">  
                                         <div class="form-group">
                                             <label class="col-form-label">Employee ID <span class="text-danger">*</span></label>
-                                            <input type="text" value="FT-0001" readonly class="form-control floating">
+                                            <input type="text" value="{{ $employee->employeeID }}" name="employeeID" id="employeeID" readonly class="form-control floating">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">  
@@ -567,203 +581,23 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="table-responsive m-t-15">
-                                    <table class="table table-striped custom-table">
-                                        <thead>
-                                            <tr>
-                                                <th>Module Permission</th>
-                                                <th class="text-center">Read</th>
-                                                <th class="text-center">Write</th>
-                                                <th class="text-center">Create</th>
-                                                <th class="text-center">Delete</th>
-                                                <th class="text-center">Import</th>
-                                                <th class="text-center">Export</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Holidays</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Leaves</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Clients</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Projects</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tasks</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Chats</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Assets</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Timing Sheets</td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input checked="" type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                                <td class="text-center">
-                                                    <input type="checkbox">
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                
                                 <div class="submit-section">
                                     <button class="btn btn-primary submit-btn">Save</button>
                                 </div>
                             </form>
+                            
                         </div>
+                         
                     </div>
                 </div>
             </div>
+            @endforeach
             <!-- /Edit Employee Modal -->
             
             <!-- Delete Employee Modal -->
-            <div class="modal custom-modal fade" id="delete_employee" role="dialog">
+            @foreach($employees as $employee)
+            <div id="delete_employee_{{ $employee->id }}" class="modal custom-modal fade" role="dialog">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-body">
@@ -774,7 +608,7 @@
                             <div class="modal-btn delete-action">
                                 <div class="row">
                                     <div class="col-6">
-                                        <a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+                                        <a href="{{ url('/employee_delete',['id' => $employee->id ]) }}" data-id="{{ $employee->id }}" id="deleteRecord" class="btn btn-primary continue-btn">Delete</a>
                                     </div>
                                     <div class="col-6">
                                         <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
@@ -785,7 +619,7 @@
                     </div>
                 </div>
             </div>
-           
+           @endforeach
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -810,11 +644,14 @@
             <!-- /Delete Employee Modal -->
             
         </div>
+
+        
         <!-- /Page Wrapper -->
  <!-- jQuery -->
- <script src="{{asset('assets/js/jquery-3.2.1.min.js')}}"></script>
+ 
 
-    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
     <script>
      $(document).ready(function(){
 
@@ -904,8 +741,56 @@
     });
     </script>
   
-`
+  
+
+  
+<script type="text/javascript">
+
+        $(document).ready(function(){
+          $("body").on("click","#deleteRecord",function(e){
+            e.preventDefault();
+            /*var inputData = $('#deleteEmp').serialize(); 
+             var dataId = $(this).attr('data-id');*/
+             //var id = $(this).data("id");
+             var id = $(this).data('id');
+             console.log(id);
+             var token = $("meta[name='csrf-token']").attr("content");
+             console.log(token);
+           // 
+            //var vid = $( "#edit_employeeprofile_" ).val();
+
+            /**/
+            //var id =($(this).attr("id"));
+            $.ajax({
+                 url: "/employee_delete/"+id,
+                 type: 'POST',
+                 data: {
+                    _token: token,
+                    id: id
+        },
+        //dataType: 'json',
+
+        success: function(response){
+            console.log(response);
+            alert(response);
+                //url:  '{{ url('/employee_delete') }}' + '/' + dataId,
+               //url: "/employee_delete/",
+               /*method:'POST',
+               data : inputData,*/
+              // dataType: 'json',
+               //data:{id:$("#delete_employee_").val()}, 
+               
+               /*success:function(data) {
+                alert(data);
+                 console.log(data);*/
+                  //$("#msg").html(data);
+               }
+            });
+            return false;
+          });
+        });
          
+</script>
 
          
     

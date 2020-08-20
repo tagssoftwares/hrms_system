@@ -20,19 +20,24 @@ class LoginController extends Controller
     	return \View::make('employee-management/login');
     }
     public function Login(Request $request){
+      //print_r($_REQUEST);
 
         /*$this->validate($request, [
-        'email'           => 'required|max:255|email',
+        'employeeID'           => 'required',
         'password'           => 'required|confirmed',
     ]);*/
     	$input = $request->all();
 
-        $email = $request->email;
+        $employeeID = $request->employeeID;
         $password = $request->password;
 
         $adminLoginCheck = DB::table('users')
-                           ->where('email',$email)
+                          ->where('employeeID',$employeeID)
                           ->first();
+
+                          
+       // $userID = $adminLoginCheck->id;
+        //print_r($adminLoginCheck);
        /*if($adminLoginCheck->email['admin@example.com']){
         return 'Invalid Username';
        }*/
@@ -40,7 +45,7 @@ class LoginController extends Controller
         if($adminLoginCheck){
 
           if (Hash::check($password, $adminLoginCheck->password)) {
-            Session::put('bamaAdmin', $email);
+            Session::put('bamaAdmin', $employeeID);
             Session::save();
             return 1;
           }

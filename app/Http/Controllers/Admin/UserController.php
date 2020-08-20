@@ -12,7 +12,9 @@ use App\Models\Department;
 use App\Models\Designation;
 use App\Models\User_Role;
 use Illuminate\Support\Facades\Hash;
+use Haruncpi\LaravelIdGenerator\IdGenerator;
 use Carbon\Carbon; 
+use Sentinel;
 
 class UserController extends Controller
 {
@@ -51,6 +53,7 @@ class UserController extends Controller
 
     public function create_user(Request $request)
     {
+        
          // validate form fields
         $request->validate([
                 'first_name'        =>      'required',
@@ -60,14 +63,32 @@ class UserController extends Controller
                 'email'             =>      'required|email',
                 'password'          =>      'required|min:6',
                 'confirm_password'  =>      'required|same:password',
-                'employeeID'        =>      'required|max:10',
+                //'employeeID'        =>      'required|max:10',
                 'joining_date'      =>      'required',
                 'department'        =>      'required',
                 'designation'       =>      'required'
             ]);
+            
+        $test1="";
+        $attencount = DB::connection('mysql')->table('users')
+                            ->select('*')
+                            
+                            ->get();
+                            foreach($attencount as $rowdt) {                            
+                                $test1 = $rowdt->employeeID; 
+                                //print_r($test1);
+                                
+                             }
+                             $attrowscount = $attencount->count();
+        //print_r($attrowscount);
 
+        $employeeIDrandam = 'TAGS'."/00/". $attrowscount;
+        
+        
+        
         $input          =           $request->all();
-
+       
+        //print_r($employeeIDrandam);die();
         $usersinputArray      =           array(
 
             'name'              =>      $request->first_name . " ". $request->middel_name. " ". $request->last_name,
@@ -76,10 +97,12 @@ class UserController extends Controller
             'password'          =>      Hash::make($request->password),
             'confirm_password'  =>      Hash::make($request->confirm_password),
             'role'              =>      $request->roleName,
-            'employeeID'        =>      $request->employeeID
+            'employeeID'        =>      $employeeIDrandam
         );
 
         $user           =           User::create($usersinputArray);
+
+        //}
 
         echo $user_id = $user->id;
         
@@ -89,7 +112,7 @@ class UserController extends Controller
 
             $employeeinputArray      =           array(
             'user_id'           =>      $user_id,
-            'employeeID'        =>      $request->employeeID,
+            'employeeID'        =>      $employeeIDrandam,
             'first_name'        =>      $request->first_name,
             'middel_name'       =>      $request->middel_name,
             'last_name'         =>      $request->last_name,
